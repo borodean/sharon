@@ -1,0 +1,5 @@
+.npmignore
+coverage
+rollup.config.js
+sharon-*.tgz
+test
