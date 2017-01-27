@@ -5,7 +5,7 @@
     "build": "rollup -c | uglifyjs -mvc collapse_vars,warnings=false"
   },
   "scripts": {
-    "build": "eval $npm_package_config_build > dist/sharon.js",
+    "build": "eval $npm_package_config_build > sharon-${npm_package_version}.min.js",
     "lint": "xo --env=browser --env=mocha --space",
     "stat": "eval $npm_package_config_build | wc -c && eval $npm_package_config_build | gzip | wc -c",
     "test": "istanbul cover _mocha -- -r jsdom-global/register"
