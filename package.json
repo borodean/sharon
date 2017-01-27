@@ -8,11 +8,12 @@
     "build": "eval $npm_package_config_build > dist/sharon.js",
     "lint": "xo --env=browser --env=mocha --space",
     "stat": "eval $npm_package_config_build | wc -c && eval $npm_package_config_build | gzip | wc -c",
-    "test": "mocha -r jsdom-global/register"
+    "test": "istanbul cover _mocha -- -r jsdom-global/register"
   },
   "dependencies": {},
   "devDependencies": {
     "chai": "*",
+    "istanbul": "^0.4.5",
     "jsdom": "^9.9.1",
     "jsdom-global": "^2.1.1",
     "mocha": "*",
