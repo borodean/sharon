@@ -10,7 +10,4 @@ var href = _hrefFactory('https://www.linkedin.com/shareArticle', {
   title: 'title'
 });
 
-module.exports = _shareFactory(href, {
-  width: 600,
-  height: 400
-});
+module.exports = _shareFactory(href, 600, 400);

@@ -6,29 +6,16 @@
  * https://drafts.csswg.org/cssom-view/#the-features-argument-to-the-open()-method
  */
 
-module.exports = function (href, options) {
+module.exports = function (href, width, height) {
   function share() {
     var url = href.apply(this, arguments);
 
-    options = Object.assign({}, options);
+    var top = screen.height > height ? Math.round((screen.height - height) / 2) : 0;
+    var left = Math.round((screen.width - width) / 2);
 
-    if (options.width) { // maybe always have them??
-      options.left = Math.round((screen.width - options.width) / 2);
-    }
-
-    if (screen.height > options.height) {
-      options.top = Math.round((screen.height - options.height) / 2);
-    }
-
-    var features = Object.keys(options).map(function (key) {
-      return key + '=' + options[key];
-    }).join();
-
-    window.open(url, null, features);
+    window.open(url, null, 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left + ',location,resizable,scrollbars,toolbar=no');
   }
 
-  options = options || {};
   share.href = href;
-
   return share;
 };

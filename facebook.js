@@ -5,8 +5,4 @@ var href = _hrefFactory('https://www.facebook.com/sharer.php', {
   url: 'u'
 });
 
-module.exports = _shareFactory(href, {
-  height: 340,
-  scrollbars: 'yes',
-  width: 670
-});
+module.exports = _shareFactory(href, 670, 340);

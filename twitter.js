@@ -10,11 +10,4 @@ var href = _hrefFactory('https://twitter.com/intent/tweet', {
   title: 'text'
 });
 
-module.exports = _shareFactory(href, {
-  height: 420,
-  location: 'yes',
-  resizable: 'yes',
-  scrollbars: 'yes',
-  toolbar: 'no',
-  width: 550
-});
+module.exports = _shareFactory(href, 550, 420);

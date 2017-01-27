@@ -8,11 +8,4 @@ var _shareFactory = require('./_share-factory');
 
 var href = _hrefFactory('https://plus.google.com/share');
 
-module.exports = _shareFactory(href, {
-  height: 600,
-  menubar: 'no',
-  resizable: 'yes',
-  scrollbars: 'yes',
-  toolbar: 'no',
-  width: 600
-});
+module.exports = _shareFactory(href, 600, 600);
