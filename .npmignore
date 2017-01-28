@@ -1,3 +1,4 @@
+*.sublime-*
 .npmignore
 coverage
 rollup.config.js
