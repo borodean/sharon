@@ -3,6 +3,7 @@ module.exports = {
   format: 'umd',
   moduleName: require('./package.json').name,
   plugins: [
-    require('rollup-plugin-commonjs')()
+    require('rollup-plugin-commonjs')(),
+    require('rollup-plugin-node-resolve')({browser: true})
   ]
 };

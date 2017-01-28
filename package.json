@@ -10,15 +10,19 @@
     "stat": "eval $npm_package_config_build | wc -c && eval $npm_package_config_build | gzip | wc -c",
     "test": "istanbul cover _mocha -- -r jsdom-global/register"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jsonp": "^0.2.1"
+  },
   "devDependencies": {
     "chai": "*",
     "istanbul": "^0.4.5",
     "jsdom": "^9.9.1",
     "jsdom-global": "^2.1.1",
     "mocha": "*",
+    "proxyquire": "^1.7.11",
     "rollup": "^0.41.4",
     "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
     "sinon": "*",
     "uglify-js": "^2.7.5",
     "xo": "^0.17.1"

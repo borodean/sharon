@@ -1,3 +1,4 @@
+var _countFactory = require('./_count-factory');
 var _hrefFactory = require('./_href-factory');
 var _shareFactory = require('./_share-factory');
 
@@ -6,3 +7,6 @@ var href = _hrefFactory('https://www.facebook.com/sharer.php', {
 });
 
 module.exports = _shareFactory(href, 670, 340);
+module.exports.count = _countFactory('http://graph.facebook.com/?id', function (data) {
+  return data.share.share_count;
+});
