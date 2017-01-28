@@ -3,9 +3,9 @@
  * https://developers.google.com/+/web/share/#sharelink-endpoint
  */
 
-var _hrefFactory = require('./_href-factory');
-var _shareFactory = require('./_share-factory');
+var hrefFactory = require('./core/href-factory');
+var shareFactory = require('./core/share-factory');
 
-var href = _hrefFactory('https://plus.google.com/share');
+var href = hrefFactory('https://plus.google.com/share');
 
-module.exports = _shareFactory(href, 600, 600);
+module.exports = shareFactory(href, 600, 600);

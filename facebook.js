@@ -1,12 +1,12 @@
-var _countFactory = require('./_count-factory');
-var _hrefFactory = require('./_href-factory');
-var _shareFactory = require('./_share-factory');
+var countFactory = require('./core/count-factory');
+var hrefFactory = require('./core/href-factory');
+var shareFactory = require('./core/share-factory');
 
-var href = _hrefFactory('https://www.facebook.com/sharer.php', {
+var href = hrefFactory('https://www.facebook.com/sharer.php', {
   url: 'u'
 });
 
-module.exports = _shareFactory(href, 670, 340);
-module.exports.count = _countFactory('http://graph.facebook.com/?id', function (data) {
+module.exports = shareFactory(href, 670, 340);
+module.exports.count = countFactory('http://graph.facebook.com/?id', function (data) {
   return data.share.share_count;
 });

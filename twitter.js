@@ -3,11 +3,11 @@
  * https://dev.twitter.com/web/tweet-button/web-intent
  */
 
-var _hrefFactory = require('./_href-factory');
-var _shareFactory = require('./_share-factory');
+var hrefFactory = require('./core/href-factory');
+var shareFactory = require('./core/share-factory');
 
-var href = _hrefFactory('https://twitter.com/intent/tweet', {
+var href = hrefFactory('https://twitter.com/intent/tweet', {
   title: 'text'
 });
 
-module.exports = _shareFactory(href, 550, 420);
+module.exports = shareFactory(href, 550, 420);
