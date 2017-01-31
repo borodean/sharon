@@ -11,7 +11,7 @@
     "test": "istanbul cover _mocha -- -r jsdom-global/register"
   },
   "dependencies": {
-    "jsonp": "^0.2.1"
+    "@borodean/jsonp": "^1.0.0"
   },
   "devDependencies": {
     "chai": "*",

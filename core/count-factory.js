@@ -1,4 +1,4 @@
-var jsonp = require('jsonp');
+var jsonp = require('@borodean/jsonp');
 
 module.exports = function (base, parser) {
   return function (url, callback) {
