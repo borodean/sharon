@@ -1,13 +1,9 @@
 {
   "name": "sharon",
   "version": "1.0.0",
-  "config": {
-    "build": "rollup -c | uglifyjs -mvc collapse_vars,warnings=false"
-  },
   "scripts": {
-    "build": "eval $npm_package_config_build > sharon-${npm_package_version}.min.js",
+    "build": "rollup -co sharon-${npm_package_version}.min.js",
     "lint": "xo --env=browser --env=mocha --space",
-    "stat": "eval $npm_package_config_build | wc -c && eval $npm_package_config_build | gzip | wc -c",
     "test": "istanbul cover _mocha -- -r jsdom-global/register"
   },
   "dependencies": {
@@ -22,9 +18,10 @@
     "proxyquire": "^1.7.11",
     "rollup": "^0.41.4",
     "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-filesize": "^1.0.1",
     "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1",
     "sinon": "*",
-    "uglify-js": "^2.7.5",
     "xo": "^0.17.1"
   }
 }
