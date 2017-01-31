@@ -2,7 +2,7 @@
   "name": "sharon",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -co sharon-${npm_package_version}.min.js",
+    "build": "rollup -co dist/sharon.min.js",
     "lint": "xo --env=browser --env=mocha --space",
     "test": "istanbul cover _mocha -- -r jsdom-global/register"
   },

@@ -1,5 +1,5 @@
 *.sublime-*
 coverage
+dist
 node_modules
-sharon-*.min.js
 sharon-*.tgz
