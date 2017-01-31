@@ -1,6 +1,6 @@
 module.exports = {
   entry: 'index.js',
-  format: 'umd',
+  format: 'iife',
   moduleName: require('./package.json').name,
   plugins: [
     require('rollup-plugin-commonjs')(),
