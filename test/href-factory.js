@@ -1,10 +1,8 @@
 var expect = require('chai').expect;
-var jsdom = require('jsdom');
 var hrefFactory = require('../core/href-factory');
 
 describe('hrefFactory', function () {
   beforeEach(function () {
-    jsdom.changeURL(window, 'http://foo.share');
     document.title = 'Sharon Stone';
   });
 

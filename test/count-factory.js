@@ -1,11 +1,10 @@
 var querystring = require('querystring');
 var expect = require('chai').expect;
-var jsdom = require('jsdom');
 var proxyquire = require('proxyquire');
 
 var countFactory = proxyquire('../core/count-factory', {
   // Stub the JSONP module to echo every query parameter it gets
-  jsonp: function (url, callback) {
+  '@borodean/jsonp': function (url, callback) {
     var query = querystring.parse(url.split('?')[1]);
     if (query.error) {
       return callback(new Error(query.error));
@@ -15,10 +14,6 @@ var countFactory = proxyquire('../core/count-factory', {
 });
 
 describe('countFactory', function () {
-  beforeEach(function () {
-    jsdom.changeURL(window, 'http://foo.share');
-  });
-
   it('creates a function', function () {
     var share = countFactory(this.base, this.callback);
     expect(share).to.be.a('function');

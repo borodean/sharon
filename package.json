@@ -4,24 +4,26 @@
   "scripts": {
     "build": "rollup -co dist/sharon.min.js",
     "lint": "xo --env=browser --env=mocha --space",
-    "test": "istanbul cover _mocha -- -r jsdom-global/register"
+    "test": "zuul -- test",
+    "test-local": "zuul --local -- test/*"
   },
   "dependencies": {
     "@borodean/jsonp": "^1.0.0"
   },
   "devDependencies": {
+    "browserify-wrap": "^1.0.2",
     "chai": "*",
-    "istanbul": "^0.4.5",
-    "jsdom": "^9.9.1",
-    "jsdom-global": "^2.1.1",
     "mocha": "*",
     "proxyquire": "^1.7.11",
+    "proxyquire-universal": "^1.0.8",
+    "proxyquireify": "^3.2.1",
     "rollup": "^0.41.4",
     "rollup-plugin-commonjs": "^7.0.0",
     "rollup-plugin-filesize": "^1.0.1",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-uglify": "^1.0.1",
     "sinon": "*",
-    "xo": "^0.17.1"
+    "xo": "^0.17.1",
+    "zuul": "^3.11.1"
   }
 }
