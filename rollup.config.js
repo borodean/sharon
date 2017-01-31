@@ -13,5 +13,6 @@ module.exports = {
       },
       mangle: true
     })
-  ]
+  ],
+  sourceMap: true
 };
