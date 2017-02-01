@@ -3,5 +3,6 @@ module.exports = {
   linkedin: require('./linkedin'),
   pinterest: require('./pinterest'),
   plus: require('./plus'),
-  twitter: require('./twitter')
+  twitter: require('./twitter'),
+  xing: require('./xing')
 };
