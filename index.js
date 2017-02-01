@@ -1,4 +1,5 @@
 module.exports = {
+  buffer: require('./buffer'),
   facebook: require('./facebook'),
   linkedin: require('./linkedin'),
   pinterest: require('./pinterest'),
