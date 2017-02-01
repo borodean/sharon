@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 module.exports = {
   entry: 'index.js',
   format: 'iife',
