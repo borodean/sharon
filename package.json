@@ -4,7 +4,7 @@
   "scripts": {
     "build": "rollup -co dist/sharon.min.js",
     "lint": "xo --env=browser --env=mocha --space",
-    "test": "zuul -- test",
+    "test": "zuul -- test/*",
     "test-local": "zuul --local -- test/*"
   },
   "dependencies": {
