@@ -98,7 +98,7 @@ sharon.twitter();
 With a custom title:
 
 ```js
-sharon.twitter({ title: 'Check it out' });
+sharon.twitter({title: 'Check it out'});
 ```
 
 Share example.com:
@@ -110,7 +110,7 @@ sharon.twitter('http://example.com');
 Share example.com with a custom title:
 
 ```js
-sharon.twitter('http://example.com', { title: 'Check it out' });
+sharon.twitter('http://example.com', {title: 'Check it out'});
 ```
 </details>
 
@@ -133,7 +133,7 @@ var link = sharon.twitter.href();
 With a custom title:
 
 ```js
-var link = sharon.twitter.href({ title: 'Check it out' });
+var link = sharon.twitter.href({title: 'Check it out'});
 ```
 
 For example.com:
@@ -145,7 +145,7 @@ var link = sharon.twitter.href('http://example.com');
 For example.com with a custom title:
 
 ```js
-var link = sharon.twitter.href('http://example.com', { title: 'Check it out' });
+var link = sharon.twitter.href('http://example.com', {title: 'Check it out'});
 ```
 </details>
 
@@ -235,11 +235,11 @@ sharon.facebook.count(function (err, count) {
 class LinkedInShareButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { href: sharon.linkedin.href() };
+    this.state = {href: sharon.linkedin.href()};
 
     sharon.linkedin.count((err, count) => {
       if (err) throw err;
-      this.setState({ count });
+      this.setState({count});
     });
   }
 
