@@ -1,11 +1,13 @@
+var merge = require('./merge');
+
 module.exports = function (base, substitutions) {
   substitutions = substitutions || {};
 
   return function (url, options) {
     if (typeof url === 'string') {
-      options = Object.assign({url: url}, options);
+      options = merge({url: url}, options);
     } else {
-      options = Object.assign({url: location}, url);
+      options = merge({url: location}, url);
       if (substitutions.title) {
         options.title = options.title || document.title;
       }
