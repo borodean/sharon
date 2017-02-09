@@ -71,7 +71,7 @@ Each social network has its own endpoint under the Sharon API:
 |----------------|--------------------|---------------------|-------------------------------|
 | Buffer         | `sharon.buffer`    | Yes                 | [Reference][params-buffer]    |
 | Facebook       | `sharon.facebook`  | Yes                 |                               |
-| Google Plus    | `sharon.plus`      | Yes                 | [Reference][params-plus]      |
+| Google+        | `sharon.plus`      | Yes                 | [Reference][params-plus]      |
 | LinkedIn       | `sharon.linkedin`  | Yes                 | [Reference][params-linkedin]  |
 | Pinterest      | `sharon.pinterest` | Yes                 | [Reference][params-pinterest] |
 | Tumblr         | `sharon.tumblr`    | Yes                 | [Reference][params-tumblr]    |
