@@ -8,7 +8,7 @@ A lightweight and modular social sharing library:
 - opens share popups;
 - counts the number of shares;
 - supports 8 social networks;
-- gzipped size is 1.12 KB;
+- gzipped size is 1.15 KB;
 - you can cherry-pick which social networks to use to make it even smaller.
 
 ## Table of contents
@@ -58,7 +58,7 @@ var twitter = require('sharon/twitter');
 
 For the `sharon.js` file check the `dist` directory of the installed module or directly download it:
 
-- [Production version][download] – 1.12 KB, minified and gzipped
+- [Production version][download] – 1.15 KB, minified and gzipped
 - [Source map][download-map]
 
 ## API
