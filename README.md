@@ -78,7 +78,7 @@ Each social network has its own endpoint under the Sharon API:
 | Twitter        | `sharon.twitter`   |                     | [Reference][params-twitter]   |
 | XING           | `sharon.xing`      |                     | [Reference][params-xing]      |
 
-This table also shows which of the networks support retrieving share counts.
+This table also shows which of the networks support retrieving share counts and links to the share parameters references.
 
 ### sharon.*network*(url = location.href, parameters = { title: document.title })
 
