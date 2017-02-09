@@ -1,6 +1,7 @@
 *.sublime-*
 .npmignore
 coverage
+npm-debug.log
 rollup.config.js
 sharon-*.tgz
 test
