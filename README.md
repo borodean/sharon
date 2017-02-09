@@ -88,30 +88,30 @@ This table also shows which of the networks support retrieving share counts.
 Opens a share popup.
 
 <details>
-  <summary>Examples</summary>
-  Share the current page:
+<summary>Examples</summary>
+Share the current page:
 
-  ```js
-  sharon.twitter();
-  ```
+```js
+sharon.twitter();
+```
 
-  With a custom title:
+With a custom title:
 
-  ```js
-  sharon.twitter({ title: 'Check it out' });
-  ```
+```js
+sharon.twitter({ title: 'Check it out' });
+```
 
-  Share example.com:
+Share example.com:
 
-  ```js
-  sharon.twitter('http://example.com');
-  ```
+```js
+sharon.twitter('http://example.com');
+```
 
-  Share example.com with a custom title:
+Share example.com with a custom title:
 
-  ```js
-  sharon.twitter('http://example.com', { title: 'Check it out' });
-  ```
+```js
+sharon.twitter('http://example.com', { title: 'Check it out' });
+```
 </details>
 
 ### sharon.*network*.href(url = location.href, parameters = { title: document.title })
@@ -123,30 +123,30 @@ Opens a share popup.
 Returns a share popup URL.
 
 <details>
-  <summary>Examples</summary>
-  Get the share popup URL for the current page:
+<summary>Examples</summary>
+Get the share popup URL for the current page:
 
-  ```js
-  var link = sharon.twitter.href();
-  ```
+```js
+var link = sharon.twitter.href();
+```
 
-  With a custom title:
+With a custom title:
 
-  ```js
-  var link = sharon.twitter.href({ title: 'Check it out' });
-  ```
+```js
+var link = sharon.twitter.href({ title: 'Check it out' });
+```
 
-  For example.com:
+For example.com:
 
-  ```js
-  var link = sharon.twitter.href('http://example.com');
-  ```
+```js
+var link = sharon.twitter.href('http://example.com');
+```
 
-  For example.com with a custom title:
+For example.com with a custom title:
 
-  ```js
-  var link = sharon.twitter.href('http://example.com', { title: 'Check it out' });
-  ```
+```js
+var link = sharon.twitter.href('http://example.com', { title: 'Check it out' });
+```
 </details>
 
 
@@ -158,24 +158,24 @@ Returns a share popup URL.
 Retrieves the share count of a URL.
 
 <details>
-  <summary>Examples</summary>
-  Share count for the current page:
+<summary>Examples</summary>
+Share count for the current page:
 
-  ```js
-  sharon.facebook.count(function (err, count) {
-    if (err) throw err;
-    console.log(count);
-  });
-  ```
+```js
+sharon.facebook.count(function (err, count) {
+  if (err) throw err;
+  console.log(count);
+});
+```
 
-  For example.com:
+For example.com:
 
-  ```js
-  sharon.facebook.count('http://example.com', function (err, count) {
-    if (err) throw err;
-    console.log(count);
-  });
-  ```
+```js
+sharon.facebook.count('http://example.com', function (err, count) {
+  if (err) throw err;
+  console.log(count);
+});
+```
 </details>
 
 
