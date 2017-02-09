@@ -1,6 +1,10 @@
 {
   "name": "sharon",
   "version": "1.0.0",
+  "description": "A lightweight and modular social sharing library",
+  "license": "MIT",
+  "author": "Vadym Borodin <borodean@gmail.com> http://borodean.com",
+  "repository": "borodean/sharon",
   "scripts": {
     "build": "rollup -co dist/sharon.min.js",
     "lint": "xo --env=browser --env=mocha --space",
