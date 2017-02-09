@@ -12,6 +12,6 @@ var href = hrefFactory('https://www.linkedin.com/shareArticle', {
 });
 
 module.exports = shareFactory(href, 600, 400);
-module.exports.count = countFactory('http://www.linkedin.com/countserv/count/share?url', function (data) {
+module.exports.count = countFactory('https://www.linkedin.com/countserv/count/share?url', function (data) {
   return data.count;
 });

@@ -7,6 +7,6 @@ var href = hrefFactory('https://www.facebook.com/sharer.php', {
 });
 
 module.exports = shareFactory(href, 670, 340);
-module.exports.count = countFactory('http://graph.facebook.com/?id', function (data) {
+module.exports.count = countFactory('https://graph.facebook.com/?id', function (data) {
   return data.share ? data.share.share_count : 0;
 });

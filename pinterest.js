@@ -7,6 +7,6 @@ var href = hrefFactory('https://pinterest.com/pin/create/button', {
 });
 
 module.exports = shareFactory(href, 750, 320);
-module.exports.count = countFactory('http://api.pinterest.com/v1/urls/count.json?url', function (data) {
+module.exports.count = countFactory('https://api.pinterest.com/v1/urls/count.json?url', function (data) {
   return data.count;
 });

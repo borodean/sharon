@@ -13,6 +13,6 @@ var href = hrefFactory('https://www.tumblr.com/widgets/share/tool', {
 });
 
 module.exports = shareFactory(href, 557, 600);
-module.exports.count = countFactory('http://api.tumblr.com/v2/share/stats?url', function (data) {
+module.exports.count = countFactory('https://api.tumblr.com/v2/share/stats?url', function (data) {
   return data.response.note_count;
 });
