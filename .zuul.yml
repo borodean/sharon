@@ -17,6 +17,7 @@ browserify:
   - plugin:
       - browserify-wrap
       - prefix: |
+          window.open = function () {};
           (function () {
           var location = 'http://foo.share/';
           var screen = {width: 1920, height: 1080};
