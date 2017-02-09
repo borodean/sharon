@@ -1,6 +1,9 @@
 *.sublime-*
 .npmignore
+.travis.yml
+.zuul.yml
 coverage
+media
 npm-debug.log
 rollup.config.js
 sharon-*.tgz
