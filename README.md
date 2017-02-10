@@ -21,7 +21,7 @@ sharon.twitter({
 Or to get a Facebook share count for your page:
 
 ```js
-sharon.facebook.count('http://borodean.com', function (err, count) {
+sharon.facebook.count(function (err, count) {
   if (err) throw err;
   console.log('Whoa, we have ' + count + ' shares!');
 });
