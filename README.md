@@ -38,7 +38,7 @@ sharon.facebook.count(function (err, count) {
   - [sharon.*network*.href(url = location.href, parameters = { title: document.title })](#sharonnetworkhrefurl--locationhref-parameters---title-documenttitle-)
   - [sharon.*network*.count(url = location.href, callback)](#sharonnetworkcounturl--locationhref-callback)
   - [Share parameters](#share-parameters)
-- [Examples](#examples)
+- [More examples](#more-examples)
   - [Poor man&apos;s tweet button](#poor-mans-tweet-button)
   - [Angular](#angular)
   - [React component](#react-component)
@@ -214,7 +214,7 @@ The set of the features is different for the most of the social networks. To fin
 
 There is an inconsistency between different networks: for instance, Twitter expects the `text` parameter to contain a link title, while Pinterest expects the `description` one. Sharon normalizes this behavior: when you pass a `title` parameter it&apos;s automatically translated into a one that corresponds to a chosen network.
 
-## Examples
+## More examples
 
 ### Poor man&apos;s tweet button
 
