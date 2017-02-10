@@ -11,6 +11,24 @@ A lightweight and modular social sharing library:
 - gzipped size is 1.15 KB;
 - you can cherry-pick which social networks to use to make it even smaller.
 
+Here how it looks when you want Sharon to open a tweet popup:
+
+```js
+sharon.twitter({
+  title: 'One last quarter as defending champs!',
+  hashtags: ['SuperBowl', 'DenverBroncos']
+});
+```
+
+Or to get a Facebook share count for your page:
+
+```js
+sharon.facebook.count('http://borodean.com', function (err, count) {
+  if (err) throw err;
+  console.log('Whoa, we have ' + count + ' shares!');
+});
+```
+
 ## Table of contents
 
 - [Setup](#setup)
