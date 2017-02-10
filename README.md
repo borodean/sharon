@@ -5,8 +5,6 @@
 A lightweight and modular social sharing library:
 
 - a toolkit to build your own share buttons;
-- opens share popups;
-- counts the number of shares;
 - supports 8 social networks;
 - gzipped size is 1.15 KB;
 - you can cherry-pick which social networks to use to make it even smaller.
