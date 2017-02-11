@@ -21,6 +21,6 @@ module.exports = function (base, substitutions) {
       return queryKey + '=' + encodeURIComponent(options[key]);
     });
 
-    return base + '?' + query.join('&');
+    return base + (~base.indexOf('?') ? '&' : '?') + query.join('&'); // eslint-disable-line no-implicit-coercion
   };
 };

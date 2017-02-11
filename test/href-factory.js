@@ -18,6 +18,14 @@ describe('hrefFactory', function () {
       expect(result).to.equal('http://example.com?url=http%3A%2F%2Ffoo.share%2F');
     });
 
+    context('when base URL contains query parameters', function () {
+      it('appends new query parameters', function () {
+        var href = hrefFactory('http://example.com?foo=bar');
+        var result = href();
+        expect(result).to.equal('http://example.com?foo=bar&url=http%3A%2F%2Ffoo.share%2F');
+      });
+    });
+
     context('when there is a string argument', function () {
       it('sets custom URL', function () {
         var href = hrefFactory('http://example.com');
