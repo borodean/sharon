@@ -3,6 +3,7 @@ module.exports = {
   facebook: require('./facebook'),
   gmail: require('./gmail'),
   linkedin: require('./linkedin'),
+  ok: require('./ok'),
   pinterest: require('./pinterest'),
   plus: require('./plus'),
   tumblr: require('./tumblr'),
