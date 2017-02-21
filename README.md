@@ -5,8 +5,8 @@
 A lightweight and modular social sharing library:
 
 - a toolkit to build your own share buttons;
-- supports 8 social networks;
-- gzipped size is 1.15 KB;
+- supports 9 sharing platforms;
+- gzipped size is 1.21 KB;
 - you can cherry-pick which social networks to use to make it even smaller.
 
 Here how it looks when you want Sharon to open a tweet popup:
@@ -74,7 +74,7 @@ var twitter = require('sharon/twitter');
 
 For the `sharon.js` file check the `dist` directory of the installed module or directly download it:
 
-- [Production version][download] – 1.15 KB, minified and gzipped
+- [Production version][download] – 1.21 KB, minified and gzipped
 - [Source map][download-map]
 
 ## API
@@ -88,6 +88,7 @@ Each social network has its own endpoint under the Sharon API:
 | Buffer         | `sharon.buffer`    | Yes                 | [Reference][params-buffer]    |
 | Facebook       | `sharon.facebook`  | Yes                 |                               |
 | Google+        | `sharon.plus`      | Yes                 | [Reference][params-plus]      |
+| Gmail          | `sharon.gmail`     |                     |                               |
 | LinkedIn       | `sharon.linkedin`  | Yes                 | [Reference][params-linkedin]  |
 | Pinterest      | `sharon.pinterest` | Yes                 | [Reference][params-pinterest] |
 | Tumblr         | `sharon.tumblr`    | Yes                 | [Reference][params-tumblr]    |
