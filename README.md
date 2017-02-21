@@ -7,7 +7,7 @@ A lightweight and modular social sharing library:
 - a toolkit to build your own share buttons;
 - supports 9 sharing platforms;
 - gzipped size is 1.21 KB;
-- you can cherry-pick which social networks to use to make it even smaller.
+- you can cherry-pick which sharing platforms to use to make it even smaller.
 
 Here how it looks when you want Sharon to open a tweet popup:
 
@@ -33,10 +33,10 @@ sharon.facebook.count(function (err, count) {
   - [CommonJS](#commonjs)
   - [Browser](#browser)
 - [API](#api)
-  - [Supported social networks](#supported-social-networks)
-  - [sharon.*network*(url = location.href, parameters = { title: document.title })](#sharonnetworkurl--locationhref-parameters---title-documenttitle-)
-  - [sharon.*network*.href(url = location.href, parameters = { title: document.title })](#sharonnetworkhrefurl--locationhref-parameters---title-documenttitle-)
-  - [sharon.*network*.count(url = location.href, callback)](#sharonnetworkcounturl--locationhref-callback)
+  - [Supported sharing platforms](#supported-sharing-platforms)
+  - [sharon.*platform*(url = location.href, parameters = { title: document.title })](#sharonplatformurl--locationhref-parameters---title-documenttitle-)
+  - [sharon.*platform*.href(url = location.href, parameters = { title: document.title })](#sharonplatformhrefurl--locationhref-parameters---title-documenttitle-)
+  - [sharon.*platform*.count(url = location.href, callback)](#sharonplatformcounturl--locationhref-callback)
   - [Share parameters](#share-parameters)
 - [More examples](#more-examples)
   - [Poor man&apos;s tweet button](#poor-mans-tweet-button)
@@ -59,7 +59,7 @@ Load the whole library:
 var sharon = require('sharon');
 ```
 
-Or cherry-pick networks for smaller Webpack, Browserify or Rollup bundles:
+Or cherry-pick platforms for smaller Webpack, Browserify or Rollup bundles:
 
 ```js
 var facebook = require('sharon/facebook');
@@ -79,25 +79,25 @@ For the `sharon.js` file check the `dist` directory of the installed module or d
 
 ## API
 
-### Supported social networks
+### Supported sharing platforms
 
-Each social network has its own endpoint under the Sharon API:
+Each sharing platform has its own endpoint under the Sharon API:
 
-| Social network | Endpoint           | Share count support | Share parameters              |
-|----------------|--------------------|---------------------|-------------------------------|
-| Buffer         | `sharon.buffer`    | Yes                 | [Reference][params-buffer]    |
-| Facebook       | `sharon.facebook`  | Yes                 |                               |
-| Google+        | `sharon.plus`      | Yes                 | [Reference][params-plus]      |
-| Gmail          | `sharon.gmail`     |                     |                               |
-| LinkedIn       | `sharon.linkedin`  | Yes                 | [Reference][params-linkedin]  |
-| Pinterest      | `sharon.pinterest` | Yes                 | [Reference][params-pinterest] |
-| Tumblr         | `sharon.tumblr`    | Yes                 | [Reference][params-tumblr]    |
-| Twitter        | `sharon.twitter`   |                     | [Reference][params-twitter]   |
-| XING           | `sharon.xing`      |                     | [Reference][params-xing]      |
+| Sharing platform | Endpoint           | Share count support | Share parameters              |
+|------------------|--------------------|---------------------|-------------------------------|
+| Buffer           | `sharon.buffer`    | Yes                 | [Reference][params-buffer]    |
+| Facebook         | `sharon.facebook`  | Yes                 |                               |
+| Google+          | `sharon.plus`      | Yes                 | [Reference][params-plus]      |
+| Gmail            | `sharon.gmail`     |                     |                               |
+| LinkedIn         | `sharon.linkedin`  | Yes                 | [Reference][params-linkedin]  |
+| Pinterest        | `sharon.pinterest` | Yes                 | [Reference][params-pinterest] |
+| Tumblr           | `sharon.tumblr`    | Yes                 | [Reference][params-tumblr]    |
+| Twitter          | `sharon.twitter`   |                     | [Reference][params-twitter]   |
+| XING             | `sharon.xing`      |                     | [Reference][params-xing]      |
 
-This table also shows which of the networks support retrieving share counts and links to the share parameters references.
+This table also shows which of the platforms support retrieving share counts and links to the share parameters references.
 
-### sharon.*network*(url = location.href, parameters = { title: document.title })
+### sharon.*platform*(url = location.href, parameters = { title: document.title })
 
 - `url` &lt;String&gt; The URL to share. Defaults to the current location.
 - `parameters` &lt;Object&gt; [Share parameters](#share-parameters). Default to an object with the title property equal to the current page title.
@@ -131,7 +131,7 @@ sharon.twitter('http://example.com', {title: 'Check it out'});
 ```
 </details>
 
-### sharon.*network*.href(url = location.href, parameters = { title: document.title })
+### sharon.*platform*.href(url = location.href, parameters = { title: document.title })
 
 - `url` &lt;String&gt; The URL to share. Defaults to the current location.
 - `parameters` &lt;Object&gt; [Share parameters](#share-parameters). Default to an object with the title property equal to the current page title.
@@ -167,7 +167,7 @@ var link = sharon.twitter.href('http://example.com', {title: 'Check it out'});
 </details>
 
 
-### sharon.*network*.count(url = location.href, callback)
+### sharon.*platform*.count(url = location.href, callback)
 
 - `url` &lt;String&gt; The URL of which to retrive the share count. Defaults to the current location.
 - `callback` &lt;Function(err, count)&gt; A callback function that receives the count.
@@ -198,7 +198,7 @@ sharon.facebook.count('http://example.com', function (err, count) {
 
 ### Share parameters
 
-When using <code>sharon.*network*</code> or <code>sharon.*network*.href</code> functions you can specify the share parameters by passing an object as the last argument. They are added to the query parameters of the share popup URL and are specifying additional features:
+When using <code>sharon.*platform*</code> or <code>sharon.*platform*.href</code> functions you can specify the share parameters by passing an object as the last argument. They are added to the query parameters of the share popup URL and are specifying additional features:
 
 ```js
 sharon.twitter({
@@ -211,9 +211,9 @@ This produces a popup with a predefined title and hashtags:
 
 ![Example][media-example]
 
-The set of the features is different for the most of the social networks. To find them out check their documentation, links to which are provided in the [Supported social networks](#supported-social-networks) table.
+The set of the features is different for the most of the sharing platforms. To find them out check their documentation, links to which are provided in the [Supported sharing platforms](#supported-sharing-platforms) table.
 
-There is an inconsistency between different networks: for instance, Twitter expects the `text` parameter to contain a link title, while Pinterest expects the `description` one. Sharon normalizes this behavior: when you pass a `title` parameter it&apos;s automatically translated into a one that corresponds to a chosen network.
+There is an inconsistency between different platforms: for instance, Twitter expects the `text` parameter to contain a link title, while Pinterest expects the `description` one. Sharon normalizes this behavior: when you pass a `title` parameter it&apos;s automatically translated into a one that corresponds to a chosen platform.
 
 ## More examples
 
