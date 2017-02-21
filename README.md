@@ -273,11 +273,11 @@ class LinkedInShareButton extends React.Component {
 
 ![:heart:][media-heart]
 
-[download]: https://github.com/borodean/sharon/releases/download/1.0.0/sharon-1.0.0.min.js
-[download-map]: https://github.com/borodean/sharon/releases/download/1.0.0/sharon-1.0.0.min.js.map
+[download]: https://github.com/borodean/sharon/releases/download/1.1.0/sharon-1.1.0.min.js
+[download-map]: https://github.com/borodean/sharon/releases/download/1.1.0/sharon-1.1.0.min.js.map
 [media-example]: media/example.png
-[media-heart]: https://cdn.rawgit.com/borodean/sharon/1.0.0/media/heart.svg
-[media-sharon]: https://cdn.rawgit.com/borodean/sharon/1.0.0/media/sharon.svg
+[media-heart]: https://cdn.rawgit.com/borodean/sharon/1.1.0/media/heart.svg
+[media-sharon]: https://cdn.rawgit.com/borodean/sharon/1.1.0/media/sharon.svg
 [params-buffer]: https://buffer.com/extras/button
 [params-linkedin]: https://developer.linkedin.com/docs/share-on-linkedin
 [params-pinterest]: https://developers.pinterest.com/docs/widgets/save
