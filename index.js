@@ -1,6 +1,7 @@
 module.exports = {
   buffer: require('./buffer'),
   facebook: require('./facebook'),
+  gmail: require('./gmail'),
   linkedin: require('./linkedin'),
   pinterest: require('./pinterest'),
   plus: require('./plus'),
