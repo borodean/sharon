@@ -15,7 +15,7 @@ var countFactory = proxyquire('../core/count-factory', {
 
 describe('countFactory', function () {
   it('creates a function', function () {
-    var share = countFactory(this.base, this.callback);
+    var share = countFactory('http://example.com?url', function () {});
     expect(share).to.be.a('function');
   });
 
