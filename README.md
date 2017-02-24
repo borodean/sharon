@@ -5,8 +5,8 @@
 A lightweight and modular social sharing library:
 
 - a toolkit to build your own share buttons;
-- supports 9 sharing platforms;
-- gzipped size is 1.21 KB;
+- supports 10 sharing platforms;
+- gzipped size is 1.24 KB;
 - you can cherry-pick which sharing platforms to use to make it even smaller.
 
 Here how it looks when you want Sharon to open a tweet popup:
@@ -74,7 +74,7 @@ var twitter = require('sharon/twitter');
 
 For the `sharon.js` file check the `dist` directory of the installed module or directly download it:
 
-- [Production version][download] – 1.21 KB, minified and gzipped
+- [Production version][download] – 1.24 KB, minified and gzipped
 - [Source map][download-map]
 
 ## API
@@ -93,6 +93,7 @@ Each sharing platform has its own endpoint under the Sharon API:
 | Pinterest        | `sharon.pinterest` | Yes                 | [Reference][params-pinterest] |
 | Tumblr           | `sharon.tumblr`    | Yes                 | [Reference][params-tumblr]    |
 | Twitter          | `sharon.twitter`   |                     | [Reference][params-twitter]   |
+| Weibo            | `sharon.weibo`     |                     |                               |
 | XING             | `sharon.xing`      |                     | [Reference][params-xing]      |
 
 This table also shows which of the platforms support retrieving share counts and links to the share parameters references.
@@ -273,11 +274,11 @@ class LinkedInShareButton extends React.Component {
 
 ![:heart:][media-heart]
 
-[download]: https://github.com/borodean/sharon/releases/download/1.1.0/sharon-1.1.0.min.js
-[download-map]: https://github.com/borodean/sharon/releases/download/1.1.0/sharon-1.1.0.min.js.map
+[download]: https://github.com/borodean/sharon/releases/download/1.2.0/sharon-1.2.0.min.js
+[download-map]: https://github.com/borodean/sharon/releases/download/1.2.0/sharon-1.2.0.min.js.map
 [media-example]: media/example.png
-[media-heart]: https://cdn.rawgit.com/borodean/sharon/1.1.0/media/heart.svg
-[media-sharon]: https://cdn.rawgit.com/borodean/sharon/1.1.0/media/sharon.svg
+[media-heart]: https://cdn.rawgit.com/borodean/sharon/1.2.0/media/heart.svg
+[media-sharon]: https://cdn.rawgit.com/borodean/sharon/1.2.0/media/sharon.svg
 [params-buffer]: https://buffer.com/extras/button
 [params-linkedin]: https://developer.linkedin.com/docs/share-on-linkedin
 [params-pinterest]: https://developers.pinterest.com/docs/widgets/save
