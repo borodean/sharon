@@ -1,6 +1,9 @@
 language: node_js
 node_js:
 - stable
+script:
+- npm run lint
+- npm test
 env:
   global:
   - secure: nDmI4bJEWZALMj3EPgLsmjQ0FmXe82q33Dh6GZGY8rM7bVZDJuZMNzGdFgM+B8kIUTK86XzKEuikkOQhMaVGscPACgTb+3efuQAShxWVCISh0g5NNuAETFEflriT0Lu9PpuZdYLM3jqtUie+e9vC5Wvk6GlsEsLPpDoleuec0jHIWjZ8zz7yaRgEZFN/vtsD6ONP5Ldp+KvlUydz/lTDIYYiuVg91BuT8rSKS44NyOIjVv/gl8D+E7vdl0e1ab/LhQ/z9fIEabZp12//h7cRReO7KCeX0olxJGt3KqD/KTRNYPo+Scyq/ftfBxLckApXw/pMGLvO+iRtGCKK1fAsEkCgHVDWIkOOCUqn6hrX4krjj1YPjSFOug4/If8lWJ+ha+iJRdkiYsfS6OyG+m+yopf9kuWaUyFyuU92Ctbe7NzKouE9IH29eDHoHsAtWHFTTEdkcpUwQsmxYtQayIBfchj8lO6UBWnkfQWal62tT78jZbSUOeKgKACm35aO+xhd1wC21zgM1CIXdkBrn/RyhsVGQd2Q371sZZAcaUvrkpsmH677BX2B0Os72OSgVFjSFv4nbY2lBsNeGYTkurkOSJF+gR6Ot4qGTTGLUHb3jCraQpCrZ8xmhsz0RwYSWbBxG0f9oz3ecPf6v8i69NHRlkU4u45/je0flklUVsUZ/YE=
