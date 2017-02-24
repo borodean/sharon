@@ -7,5 +7,6 @@ module.exports = {
   plus: require('./plus'),
   tumblr: require('./tumblr'),
   twitter: require('./twitter'),
+  weibo: require('./weibo'),
   xing: require('./xing')
 };
