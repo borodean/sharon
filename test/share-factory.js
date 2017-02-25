@@ -54,7 +54,7 @@ describe('shareFactory', function () {
 
       shareFactory(this.href, 640, 480)();
       expect(window.open.args[0][2]).to.contain('left=640');
-      expect(window.open.args[0][2]).to.contain('top=300');
+      expect(window.open.args[0][2]).to.contain('top=120');
     });
 
     it('keeps the window below the top edge of the screen', function () {
