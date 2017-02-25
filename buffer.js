@@ -8,7 +8,7 @@ var countFactory = require('./core/count-factory');
 var hrefFactory = require('./core/href-factory');
 var shareFactory = require('./core/share-factory');
 
-var href = hrefFactory('https://bufferapp.com/add', {
+var href = hrefFactory('https://buffer.com/add', {
   title: 'text'
 });
 
