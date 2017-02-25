@@ -6,7 +6,7 @@ A lightweight and modular social sharing library:
 
 - a toolkit to build your own share buttons;
 - supports 12 sharing platforms;
-- gzipped size is 1.51 KB;
+- gzipped size is 1.52 KB;
 - you can cherry-pick which sharing platforms to use to make it even smaller.
 
 Here how it looks when you want Sharon to open a tweet popup:
@@ -74,7 +74,7 @@ var twitter = require('sharon/twitter');
 
 For the `sharon.js` file check the `dist` directory of the installed module or directly download it:
 
-- [Production version][download] – 1.51 KB, minified and gzipped
+- [Production version][download] – 1.52 KB, minified and gzipped
 - [Source map][download-map]
 
 ## API
@@ -276,11 +276,11 @@ class LinkedInShareButton extends React.Component {
 
 ![:heart:][media-heart]
 
-[download]: https://github.com/borodean/sharon/releases/download/1.3.0/sharon-1.3.0.min.js
-[download-map]: https://github.com/borodean/sharon/releases/download/1.3.0/sharon-1.3.0.min.js.map
+[download]: https://github.com/borodean/sharon/releases/download/1.4.0/sharon-1.4.0.min.js
+[download-map]: https://github.com/borodean/sharon/releases/download/1.4.0/sharon-1.4.0.min.js.map
 [media-example]: media/example.png
-[media-heart]: https://cdn.rawgit.com/borodean/sharon/1.3.0/media/heart.svg
-[media-sharon]: https://cdn.rawgit.com/borodean/sharon/1.3.0/media/sharon.svg
+[media-heart]: https://cdn.rawgit.com/borodean/sharon/1.4.0/media/heart.svg
+[media-sharon]: https://cdn.rawgit.com/borodean/sharon/1.4.0/media/sharon.svg
 [params-buffer]: https://buffer.com/extras/button
 [params-linkedin]: https://developer.linkedin.com/docs/share-on-linkedin
 [params-pinterest]: https://developers.pinterest.com/docs/widgets/save

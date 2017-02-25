@@ -1,3 +1,7 @@
+## 1.4.0
+
+Pop windows slightly above the center of the screen.
+
 ## 1.3.0
 
 Support Odnoklassniki and Vkontakte.
