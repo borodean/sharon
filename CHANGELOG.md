@@ -1,3 +1,7 @@
+## 1.3.0
+
+Support Odnoklassniki and Vkontakte.
+
 ## 1.2.0
 
 Support Weibo.
