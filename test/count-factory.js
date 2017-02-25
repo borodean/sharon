@@ -3,7 +3,7 @@ var expect = require('chai').expect;
 var proxyquire = require('proxyquire');
 
 var countFactory = proxyquire('../core/count-factory', {
-  // Stub the JSONP module to echo every query parameter it gets
+  // Stub the JSONP 2-argument syntax to echo every query parameter it gets
   '@borodean/jsonp': function (url, callback) {
     var query = querystring.parse(url.split('?')[1]);
     if (query.error) {
