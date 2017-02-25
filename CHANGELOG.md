@@ -1,3 +1,10 @@
+## 1.4.1
+
+Change URLs to whenever possible:
+
+- avoid redirections,
+- use HTTPS.
+
 ## 1.4.0
 
 Pop windows slightly above the center of the screen.
