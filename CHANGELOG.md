@@ -1,3 +1,7 @@
+## 1.6.0
+
+Support Telegram.
+
 ## 1.5.0
 
 Support Reddit.
