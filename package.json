@@ -1,6 +1,6 @@
 {
   "name": "sharon",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "A lightweight and modular social sharing library",
   "keywords": [
     "share-counts",
@@ -12,6 +12,7 @@
     "linkedin",
     "odnoklassniki",
     "pinterest",
+    "reddit",
     "tumblr",
     "twitter",
     "vkontakte",

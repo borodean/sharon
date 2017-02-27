@@ -1,3 +1,7 @@
+## 1.5.0
+
+Support Reddit.
+
 ## 1.4.1
 
 Change URLs to whenever possible:
