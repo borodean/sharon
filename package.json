@@ -28,7 +28,7 @@
     "test-local": "zuul --local -- test/*"
   },
   "dependencies": {
-    "@borodean/jsonp": "^1.1.0"
+    "@borodean/jsonp": "^1.2.0"
   },
   "devDependencies": {
     "browserify-wrap": "^1.0.2",

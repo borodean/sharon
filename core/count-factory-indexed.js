@@ -7,9 +7,13 @@ module.exports = function (base0, base1, callbacks) {
       url = location;
     }
 
-    var id = callbacks.length;
-    var src = base0 + encodeURIComponent(url) + base1 + id;
+    var id = String(callbacks.length);
 
-    jsonp(callbacks, id, src, callback);
+    jsonp({
+      url: base0 + encodeURIComponent(url) + base1 + id,
+      parameter: false,
+      object: callbacks,
+      key: id
+    }, callback);
   };
 };

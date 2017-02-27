@@ -5,9 +5,9 @@ var proxyquire = require('proxyquire');
 var handler;
 
 var countFactoryIndexed = proxyquire('../core/count-factory-indexed', {
-  // Stub the JSONP 4-argument syntax to echo every query parameter it gets
-  '@borodean/jsonp': function (object, key, url, callback) {
-    var query = querystring.parse(url.split('?')[1]);
+  // Stub the JSONP function to echo every query parameter it gets
+  '@borodean/jsonp': function (options, callback) {
+    var query = querystring.parse(options.url.split('?')[1]);
     if (query.error) {
       return callback(new Error(query.error));
     }
