@@ -7,6 +7,7 @@ module.exports = {
   pinterest: require('./pinterest'),
   plus: require('./plus'),
   reddit: require('./reddit'),
+  telegram: require('./telegram'),
   tumblr: require('./tumblr'),
   twitter: require('./twitter'),
   vk: require('./vk'),

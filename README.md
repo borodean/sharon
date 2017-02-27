@@ -93,6 +93,7 @@ Each sharing platform has its own endpoint under the Sharon API:
 | Odnoklassniki    | `sharon.ok`        | Yes                 |                               |
 | Pinterest        | `sharon.pinterest` | Yes                 | [Reference][params-pinterest] |
 | Reddit           | `sharon.reddit`    | Yes                 | [Reference][params-reddit]    |
+| Telegram         | `sharon.telegram`  |                     |                               |
 | Tumblr           | `sharon.tumblr`    | Yes                 | [Reference][params-tumblr]    |
 | Twitter          | `sharon.twitter`   |                     | [Reference][params-twitter]   |
 | Vkontakte        | `sharon.vk`        | Yes                 | [Reference][params-vk]        |
