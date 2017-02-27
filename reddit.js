@@ -13,7 +13,7 @@ var href = hrefFactory('https://www.reddit.com/submit', {
   title: 'title'
 });
 
-module.exports = shareFactory(href, 670, 340);
+module.exports = shareFactory(href);
 module.exports.count = countFactory('https://www.reddit.com/api/info.json?url', function (data) {
   return data.data.children.reduce(function (previousValue, currentValue) {
     return previousValue + currentValue.data.score;

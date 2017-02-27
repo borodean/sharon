@@ -64,5 +64,10 @@ describe('shareFactory', function () {
       shareFactory(this.href, 640, 480)();
       expect(window.open.args[0][2]).to.contain('top=0');
     });
+
+    it('opens a new tab instead of a popup', function () {
+      shareFactory(this.href)();
+      expect(window.open.args[0]).to.have.lengthOf(1);
+    });
   });
 });
