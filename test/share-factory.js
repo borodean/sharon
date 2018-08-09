@@ -1,73 +1,85 @@
 var expect = require('chai').expect;
+var proxyquire = require('proxyquire');
 var sinon = require('sinon');
-var shareFactory = require('../core/share-factory');
+
+var popup = sinon.spy();
+var shareFactory = proxyquire('../core/share-factory', {
+  './popup': popup
+});
 
 describe('shareFactory', function () {
   beforeEach(function () {
     this.href = sinon.stub().returns('http://example.com');
+    this.share = shareFactory(this.href, 640, 480);
+  });
+
+  afterEach(function () {
+    popup.resetHistory();
   });
 
   it('creates a function', function () {
-    var share = shareFactory(this.href, 640, 480);
-    expect(share).to.be.a('function');
+    expect(this.share).to.be.a('function');
   });
 
   it('sets the href method', function () {
-    var share = shareFactory(this.href, 640, 480);
-    expect(share.href).to.equal(this.href);
+    expect(this.share.href).to.equal(this.href);
   });
 
   describe('created function', function () {
-    beforeEach(function () {
-      sinon.spy(window, 'open');
-    });
-
-    afterEach(function () {
-      window.open.restore();
-    });
-
     it('opens a resource returned by the href function', function () {
-      shareFactory(this.href, 640, 480)();
-      expect(window.open.called).to.equal(true);
-      expect(window.open.args[0][0]).to.equal('http://example.com');
+      this.share();
+      expect(popup.args[0][0]).to.equal('http://example.com');
     });
 
     it('passes the arguments to the href function', function () {
-      shareFactory(this.href, 640, 480)('http://foo.share');
+      this.share('http://foo.share');
       expect(this.href.args[0]).to.deep.equal(['http://foo.share']);
     });
 
-    it('sets window features', function () {
-      shareFactory(this.href, 640, 480)();
-      expect(window.open.args[0][2]).to.contain('location,resizable,scrollbars,toolbar=no');
+    it('sets popup dimensions', function () {
+      this.share();
+      expect(popup.args[0][2]).to.equal(640);
+      expect(popup.args[0][3]).to.equal(480);
+    });
+  });
+
+  describe('defer function', function () {
+    it('opens a blank page', function () {
+      this.share.defer();
+      expect(popup.args[0][0]).to.equal('about:blank');
     });
 
-    it('sets window dimensions', function () {
-      shareFactory(this.href, 640, 480)();
-      expect(window.open.args[0][2]).to.contain('width=640');
-      expect(window.open.args[0][2]).to.contain('height=480');
+    it('opens the provided page', function () {
+      this.share.defer('http://foo.blank');
+      expect(popup.args[0][0]).to.equal('http://foo.blank');
     });
 
-    it('centers the window', function () {
-      screen.width = 1920;
-      screen.height = 1080;
-
-      shareFactory(this.href, 640, 480)();
-      expect(window.open.args[0][2]).to.contain('left=640');
-      expect(window.open.args[0][2]).to.contain('top=120');
+    it('sets popup dimensions', function () {
+      this.share.defer();
+      expect(popup.args[0][2]).to.equal(640);
+      expect(popup.args[0][3]).to.equal(480);
     });
 
-    it('keeps the window below the top edge of the screen', function () {
-      screen.width = 320;
-      screen.height = 240;
-
-      shareFactory(this.href, 640, 480)();
-      expect(window.open.args[0][2]).to.contain('top=0');
+    it('returns a function', function () {
+      const share = this.share.defer();
+      expect(share).to.be.a('function');
     });
 
-    it('opens a new tab instead of a popup', function () {
-      shareFactory(this.href)();
-      expect(window.open.args[0]).to.have.lengthOf(1);
+    describe('returned function', function () {
+      it('opens a resource returned by the href function', function () {
+        this.share.defer()();
+        expect(popup.args[1][0]).to.equal('http://example.com');
+      });
+
+      it('passes the arguments to the href function', function () {
+        this.share.defer()('http://foo.share');
+        expect(this.href.args[0]).to.deep.equal(['http://foo.share']);
+      });
+
+      it('uses the same window', function () {
+        this.share.defer()();
+        expect(popup.args[0][1]).to.equal(popup.args[1][1]);
+      });
     });
   });
 });
