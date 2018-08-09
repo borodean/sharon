@@ -1,3 +1,7 @@
+## 2.0.0-beta.0
+
+Add sharon.*network*.defer method to avoid the popup blockers.
+
 ## 1.6.0
 
 Support Telegram.
