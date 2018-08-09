@@ -1,4 +1,4 @@
-module.exports = {
+var sharon = {
   buffer: require('./buffer'),
   facebook: require('./facebook'),
   gmail: require('./gmail'),
@@ -14,3 +14,5 @@ module.exports = {
   weibo: require('./weibo'),
   xing: require('./xing')
 };
+
+module.exports = sharon;
