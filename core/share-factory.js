@@ -5,7 +5,7 @@ var count = 0;
 module.exports = function (href, width, height) {
   function share() {
     var url = href.apply(this, arguments);
-    popup(url, null, width, height);
+    return popup(url, null, width, height);
   }
 
   share.defer = function (url) {
@@ -16,7 +16,7 @@ module.exports = function (href, width, height) {
 
     return function () {
       var url = href.apply(this, arguments);
-      popup(url, name);
+      return popup(url, name);
     };
   };
 

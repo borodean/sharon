@@ -11,8 +11,8 @@ module.exports = function (url, name, width, height) {
     var top = Math.max(0, Math.round(((screen.height / 3) - (height / 2))));
     var left = Math.round((screen.width - width) / 2);
 
-    window.open(url, name, 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left + ',location,resizable,scrollbars,toolbar=no');
-  } else {
-    window.open(url, name);
+    return window.open(url, name, 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left + ',location,resizable,scrollbars,toolbar=no');
   }
+
+  return window.open(url, name);
 };
