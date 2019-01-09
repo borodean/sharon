@@ -1,3 +1,7 @@
+## 2.0.0-beta.1
+
+Return the newly created window from share methods.
+
 ## 2.0.0-beta.0
 
 Add sharon.*network*.defer method to avoid the popup blockers.
