@@ -1,4 +1,3 @@
-var expect = require('chai').expect;
 var hrefFactory = require('../core/href-factory');
 
 describe('hrefFactory', function () {
