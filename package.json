@@ -26,15 +26,22 @@
   "scripts": {
     "build": "rollup -co dist/sharon.min.js",
     "lint": "xo --env=browser --env=mocha --space",
-    "test": "zuul -- test/*",
-    "test-local": "zuul --local -- test/*"
+    "test": "karma start",
+    "test-local": "karma start --local"
   },
   "dependencies": {
     "@borodean/jsonp": "^1.2.0"
   },
   "devDependencies": {
+    "browserify": "^16.5.0",
     "browserify-wrap": "^1.0.2",
     "chai": "*",
+    "karma": "^4.4.1",
+    "karma-browserify": "^7.0.0",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.3.0",
+    "karma-sauce-launcher": "^2.0.2",
+    "karma-sinon": "^1.0.5",
     "mocha": "*",
     "proxyquire": "^1.7.11",
     "proxyquire-universal": "^1.0.8",
@@ -45,7 +52,7 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-uglify": "^1.0.1",
     "sinon": "*",
-    "xo": "^0.17.1",
-    "zuul": "^3.11.1"
+    "watchify": "^3.11.1",
+    "xo": "^0.17.1"
   }
 }

@@ -1,5 +1,3 @@
-var expect = require('chai').expect;
-var sinon = require('sinon');
 var shareFactory = require('../core/share-factory');
 
 describe('shareFactory', function () {
