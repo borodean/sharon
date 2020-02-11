@@ -25,7 +25,7 @@
   "repository": "borodean/sharon",
   "scripts": {
     "build": "rollup -co dist/sharon.min.js",
-    "lint": "xo --env=browser --env=mocha --space",
+    "lint": "xo --env=browser --env=mocha --global expect --global sinon --space",
     "test": "karma start",
     "test-local": "karma start --local"
   },
