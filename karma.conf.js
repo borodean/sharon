@@ -3,32 +3,32 @@ module.exports = config => {
     'SL Chrome 26': {
       base: 'SauceLabs',
       browserName: 'chrome',
-      version: '26'
+      platform: 'Linux',
+      version: '26.0',
     },
     'SL Edge 13': {
       base: 'SauceLabs',
-      browserName: 'microsoftedge',
-      version: '13'
+      browserName: 'MicrosoftEdge',
+      platform: 'Windows 10',
+      version: '13.10586',
     },
     'SL Firefox 4': {
       base: 'SauceLabs',
       browserName: 'firefox',
-      version: '4'
+      platform: 'Linux',
+      version: '4.0',
     },
     'SL Internet Explorer 9': {
       base: 'SauceLabs',
       browserName: 'internet explorer',
-      version: '9'
+      platform: 'Windows 7',
+      version: '9.0',
     },
-    'SL iOS 8.1': {
-      base: 'SauceLabs',
-      browserName: 'iphone',
-      version: '8.1'
-    },
-    'SL Safari 6': {
+    'SL Safari 8': {
       base: 'SauceLabs',
       browserName: 'safari',
-      version: '6'
+      platform: 'OS X 10.10',
+      version: '8.0',
     }
   };
 
