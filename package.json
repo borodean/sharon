@@ -51,7 +51,7 @@
     "rollup-plugin-filesize": "^1.0.1",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-uglify": "^1.0.1",
-    "sinon": "*",
+    "sinon": "^7.5.0",
     "watchify": "^3.11.1",
     "xo": "^0.17.1"
   }
