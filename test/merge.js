@@ -1,4 +1,3 @@
-var expect = require('chai').expect;
 var merge = require('../core/merge');
 
 describe('merge', function () {

@@ -1,5 +1,4 @@
 var querystring = require('querystring');
-var expect = require('chai').expect;
 var proxyquire = require('proxyquire');
 
 var handler;

@@ -1,8 +1,8 @@
 *.sublime-*
 .npmignore
 .travis.yml
-.zuul.yml
 coverage
+karma.conf.js
 media
 npm-debug.log
 rollup.config.js
