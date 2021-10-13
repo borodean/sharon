@@ -1,6 +1,6 @@
 {
   "name": "sharon",
-  "version": "2.0.0-beta.0",
+  "version": "2.0.1",
   "description": "A lightweight and modular social sharing library",
   "keywords": [
     "share-counts",
@@ -25,17 +25,24 @@
   "repository": "borodean/sharon",
   "scripts": {
     "build": "rollup -co dist/sharon.min.js",
-    "lint": "xo --env=browser --env=mocha --no-esnext --space",
-    "test": "zuul -- test/*",
-    "test-local": "zuul --local -- test/*"
+    "lint": "xo --env=browser --env=mocha --no-esnext --global expect --global sinon --space",
+    "test": "karma start",
+    "test-local": "karma start --local"
   },
   "dependencies": {
     "@borodean/jsonp": "^1.2.0"
   },
   "devDependencies": {
+    "browserify": "^16.5.0",
     "browserify-wrap": "^1.0.2",
     "chai": "*",
-    "mocha": "*",
+    "karma": "^4.4.1",
+    "karma-browserify": "^7.0.0",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.3.0",
+    "karma-sauce-launcher": "^1.2.0",
+    "karma-sinon": "^1.0.5",
+    "mocha": "^4.1.0",
     "proxyquire": "^2.0.1",
     "proxyquire-universal": "^1.0.8",
     "proxyquireify": "^3.2.1",
@@ -44,8 +51,8 @@
     "rollup-plugin-filesize": "^4.0.1",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-uglify": "^4.0.0",
-    "sinon": "*",
-    "xo": "^0.22.0",
-    "zuul": "^3.11.1"
+    "sinon": "^7.5.0",
+    "watchify": "^3.11.1",
+    "xo": "^0.17.1"
   }
 }
