@@ -21,7 +21,7 @@ sharon.twitter({
 Or to get a Facebook share count for your page:
 
 ```js
-sharon.facebook.count(function (err, count) {
+sharon.facebook.count((err, count) => {
   if (err) throw err;
   console.log("Whoa, we have " + count + " shares!");
 });
@@ -40,8 +40,8 @@ sharon.facebook.count(function (err, count) {
   - [Share parameters](#share-parameters)
 - [More examples](#more-examples)
   - [Poor man&apos;s tweet button](#poor-mans-tweet-button)
-  - [Angular](#angular)
   - [React component](#react-component)
+  - [AngularJS](#angularjs)
 
 ## Setup
 
@@ -56,14 +56,14 @@ npm install sharon --save
 Load the whole library:
 
 ```js
-var sharon = require("sharon");
+import sharon from "sharon";
 ```
 
-Or cherry-pick platforms for smaller Webpack, Browserify or Rollup bundles:
+Or cherry-pick platforms for smaller Webpack, Rollup, or Browserify bundles:
 
 ```js
-var facebook = require("sharon/facebook");
-var twitter = require("sharon/twitter");
+import facebook from "sharon/facebook";
+import twitter from "sharon/twitter";
 ```
 
 ### Browser
@@ -150,25 +150,27 @@ Returns a share popup URL.
 Get the share popup URL for the current page:
 
 ```js
-var link = sharon.twitter.href();
+const link = sharon.twitter.href();
 ```
 
 With a custom title:
 
 ```js
-var link = sharon.twitter.href({ title: "Check it out" });
+const link = sharon.twitter.href({ title: "Check it out" });
 ```
 
 For example.com:
 
 ```js
-var link = sharon.twitter.href("http://example.com");
+const link = sharon.twitter.href("http://example.com");
 ```
 
 For example.com with a custom title:
 
 ```js
-var link = sharon.twitter.href("http://example.com", { title: "Check it out" });
+const link = sharon.twitter.href("http://example.com", {
+  title: "Check it out",
+});
 ```
 
 </details>
@@ -185,7 +187,7 @@ Retrieves the share count of a URL.
 Share count for the current page:
 
 ```js
-sharon.facebook.count(function (err, count) {
+sharon.facebook.count((err, count) => {
   if (err) throw err;
   console.log(count);
 });
@@ -194,7 +196,7 @@ sharon.facebook.count(function (err, count) {
 For example.com:
 
 ```js
-sharon.facebook.count("http://example.com", function (err, count) {
+sharon.facebook.count("http://example.com", (err, count) => {
   if (err) throw err;
   console.log(count);
 });
@@ -229,7 +231,33 @@ There is an inconsistency between different platforms: for instance, Twitter exp
 <button type="button" onclick="sharon.twitter()">Tweet</button>
 ```
 
-### Angular
+### React component
+
+```jsx
+function LinkedInShareButton {
+  const [count, setCount] = useState();
+
+  useEffect(() => {
+    sharon.linkedin.count((err, count) => {
+      if (err) throw err;
+      setCount(count);
+    });
+  }, []);
+
+  const share = useCallback((event) => {
+    event.preventDefault();
+    sharon.linkedin();
+  }, []);
+
+  return (
+    <a onClick={share} href={sharon.linkedin.href()}>
+      Share on LinkedIn {count}
+    </a>
+  );
+}
+```
+
+### AngularJS
 
 ```html
 <a ng-click="share($event)" ng-href="{{href}}">Share on Facebook {{count}}</a>
@@ -238,47 +266,18 @@ There is an inconsistency between different platforms: for instance, Twitter exp
 ```js
 $scope.href = sharon.facebook.href();
 
-$scope.share = function (event) {
+$scope.share = (event) => {
   event.preventDefault();
   sharon.facebook();
 };
 
-sharon.facebook.count(function (err, count) {
+sharon.facebook.count((err, count) => {
   if (err) throw err;
 
-  $scope.$apply(function () {
+  $scope.$apply(() => {
     $scope.count = count;
   });
 });
-```
-
-### React component
-
-```jsx
-class LinkedInShareButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { href: sharon.linkedin.href() };
-
-    sharon.linkedin.count((err, count) => {
-      if (err) throw err;
-      this.setState({ count });
-    });
-  }
-
-  share(event) {
-    event.preventDefault();
-    sharon.linkedin();
-  }
-
-  render() {
-    return (
-      <a onClick={this.share} href={this.state.href}>
-        Share on LinkedIn {this.state.count}
-      </a>
-    );
-  }
-}
 ```
 
 ![:heart:][media-heart]
