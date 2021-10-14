@@ -12,7 +12,3 @@ const href = hrefFactory('https://www.linkedin.com/sharing/share-offsite/', {
 });
 
 module.exports = shareFactory(href, 600, 400);
-module.exports.count = countFactory(
-  'https://www.linkedin.com/countserv/count/share?url',
-  (data) => data.count,
-);

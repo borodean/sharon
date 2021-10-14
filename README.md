@@ -89,7 +89,7 @@ Each sharing platform has its endpoint under the Sharon API:
 | Facebook         | `sharon.facebook`  | Yes                 |                               |
 | Gmail            | `sharon.gmail`     |                     |                               |
 | Google+          | `sharon.plus`      | Yes                 | [Reference][params-plus]      |
-| LinkedIn         | `sharon.linkedin`  | Yes                 | [Reference][params-linkedin]  |
+| LinkedIn         | `sharon.linkedin`  |                     | [Reference][params-linkedin]  |
 | Odnoklassniki    | `sharon.ok`        | Yes                 |                               |
 | Pinterest        | `sharon.pinterest` | Yes                 | [Reference][params-pinterest] |
 | Reddit           | `sharon.reddit`    | Yes                 | [Reference][params-reddit]    |
