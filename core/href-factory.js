@@ -1,11 +1,11 @@
-var merge = require('./merge');
+const merge = require('./merge');
 
 module.exports = function (base, substitutions) {
   substitutions = substitutions || {};
 
   return function (url, options) {
     if (typeof url === 'string') {
-      options = merge({url: url}, options);
+      options = merge({url}, options);
     } else {
       options = merge({url: location}, url);
       if (substitutions.title) {
@@ -13,11 +13,12 @@ module.exports = function (base, substitutions) {
       }
     }
 
-    var query = Object.keys(options).map(function (key) {
-      var queryKey = substitutions[key] || key;
+    const query = Object.keys(options).map(key => {
+      const queryKey = substitutions[key] || key;
       if (Array.isArray(options[key])) {
         return queryKey + '=' + options[key].map(encodeURIComponent);
       }
+
       return queryKey + '=' + encodeURIComponent(options[key]);
     });
 

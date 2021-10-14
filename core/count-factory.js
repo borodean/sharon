@@ -1,4 +1,4 @@
-var jsonp = require('@borodean/jsonp');
+const jsonp = require('@borodean/jsonp');
 
 module.exports = function (base, parser, parameter) {
   return function (url, callback) {
@@ -9,11 +9,12 @@ module.exports = function (base, parser, parameter) {
 
     jsonp({
       url: base + '=' + encodeURIComponent(url),
-      parameter: parameter
-    }, function (err, data) {
-      if (err) {
-        return callback(err);
+      parameter,
+    }, (error, data) => {
+      if (error) {
+        return callback(error);
       }
+
       callback(null, parser(data));
     });
   };

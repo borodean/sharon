@@ -6,9 +6,9 @@
 
 module.exports = function (target, source) {
   if (source) {
-    Object.keys(source).forEach(function (key) {
+    for (const key of Object.keys(source)) {
       target[key] = source[key];
-    });
+    }
   }
 
   return target;

@@ -1,19 +1,19 @@
-var expect = require('chai').expect;
-var proxyquire = require('proxyquire');
-var sinon = require('sinon');
+const expect = require('chai').expect;
+const proxyquire = require('proxyquire');
+const sinon = require('sinon');
 
-var popup = sinon.spy();
-var shareFactory = proxyquire('../core/share-factory', {
-  './popup': popup
+const popup = sinon.spy();
+const shareFactory = proxyquire('../core/share-factory', {
+  './popup': popup,
 });
 
-describe('shareFactory', function () {
+describe('shareFactory', () => {
   beforeEach(function () {
     this.href = sinon.stub().returns('http://example.com');
     this.share = shareFactory(this.href, 640, 480);
   });
 
-  afterEach(function () {
+  afterEach(() => {
     popup.resetHistory();
   });
 
@@ -25,7 +25,7 @@ describe('shareFactory', function () {
     expect(this.share.href).to.equal(this.href);
   });
 
-  describe('created function', function () {
+  describe('created function', () => {
     it('opens a resource returned by the href function', function () {
       this.share();
       expect(popup.args[0][0]).to.equal('http://example.com');
@@ -43,7 +43,7 @@ describe('shareFactory', function () {
     });
   });
 
-  describe('defer function', function () {
+  describe('defer function', () => {
     it('opens a blank page', function () {
       this.share.defer();
       expect(popup.args[0][0]).to.equal('about:blank');
@@ -65,7 +65,7 @@ describe('shareFactory', function () {
       expect(share).to.be.a('function');
     });
 
-    describe('returned function', function () {
+    describe('returned function', () => {
       it('opens a resource returned by the href function', function () {
         this.share.defer()();
         expect(popup.args[1][0]).to.equal('http://example.com');

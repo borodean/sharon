@@ -5,17 +5,13 @@
  * https://www.reddit.com/dev/api/#GET_api_info
  */
 
-var countFactory = require('./core/count-factory');
-var hrefFactory = require('./core/href-factory');
-var shareFactory = require('./core/share-factory');
+const countFactory = require('./core/count-factory');
+const hrefFactory = require('./core/href-factory');
+const shareFactory = require('./core/share-factory');
 
-var href = hrefFactory('https://www.reddit.com/submit', {
-  title: 'title'
+const href = hrefFactory('https://www.reddit.com/submit', {
+  title: 'title',
 });
 
 module.exports = shareFactory(href);
-module.exports.count = countFactory('https://www.reddit.com/api/info.json?url', function (data) {
-  return data.data.children.reduce(function (previousValue, currentValue) {
-    return previousValue + currentValue.data.score;
-  }, 0);
-}, 'jsonp');
+module.exports.count = countFactory('https://www.reddit.com/api/info.json?url', data => data.data.children.reduce((previousValue, currentValue) => previousValue + currentValue.data.score, 0), 'jsonp');

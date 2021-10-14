@@ -1,50 +1,51 @@
-var querystring = require('querystring');
-var proxyquire = require('proxyquire');
+const querystring = require('querystring');
+const proxyquire = require('proxyquire');
 
-var countFactory = proxyquire('../core/count-factory', {
+const countFactory = proxyquire('../core/count-factory', {
   // Stub the JSONP function to echo every query parameter it gets
-  '@borodean/jsonp': function (options, callback) {
-    var query = querystring.parse(options.url.split('?')[1]);
+  '@borodean/jsonp'(options, callback) {
+    const query = querystring.parse(options.url.split('?')[1]);
     if (query.error) {
       return callback(new Error(query.error));
     }
+
     callback(null, query);
-  }
+  },
 });
 
-describe('countFactory', function () {
-  it('creates a function', function () {
-    var share = countFactory('http://example.com?url', function () {});
+describe('countFactory', () => {
+  it('creates a function', () => {
+    const share = countFactory('http://example.com?url', () => {});
     expect(share).to.be.a('function');
   });
 
-  describe('created function', function () {
-    it('retrieves a share count for the current page', function () {
-      var count = countFactory('http://example.com?count=42&url', function (data) {
+  describe('created function', () => {
+    it('retrieves a share count for the current page', () => {
+      const count = countFactory('http://example.com?count=42&url', data => {
         expect(data.url).to.equal('http://foo.share/');
         return Number(data.count);
       });
-      count(function (err, data) {
-        expect(err).to.equal(null);
+      count((error, data) => {
+        expect(error).to.equal(null);
         expect(data).to.equal(42);
       });
     });
 
-    context('when there is a string argument', function () {
-      it('sets custom URL', function () {
-        var count = countFactory('http://example.com?url', function (data) {
+    context('when there is a string argument', () => {
+      it('sets custom URL', () => {
+        const count = countFactory('http://example.com?url', data => {
           expect(data.url).to.equal('http://bar.share/');
         });
-        count('http://bar.share/', function () {});
+        count('http://bar.share/', () => {});
       });
     });
 
-    context('when network fails', function () {
-      it('passes an error argument', function () {
-        var count = countFactory('http://example.com?error=Timeout&url', function () {});
-        count('http://bar.share/', function (err) {
-          expect(err).to.be.an.instanceof(Error);
-          expect(err.message).to.equal('Timeout');
+    context('when network fails', () => {
+      it('passes an error argument', () => {
+        const count = countFactory('http://example.com?error=Timeout&url', () => {});
+        count('http://bar.share/', error => {
+          expect(error).to.be.an.instanceof(Error);
+          expect(error.message).to.equal('Timeout');
         });
       });
     });

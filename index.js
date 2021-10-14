@@ -1,4 +1,4 @@
-var sharon = {
+const sharon = {
   buffer: require('./buffer'),
   facebook: require('./facebook'),
   gmail: require('./gmail'),
@@ -12,7 +12,7 @@ var sharon = {
   twitter: require('./twitter'),
   vk: require('./vk'),
   weibo: require('./weibo'),
-  xing: require('./xing')
+  xing: require('./xing'),
 };
 
 module.exports = sharon;

@@ -1,21 +1,21 @@
-var popup = require('./popup');
+const popup = require('./popup');
 
-var count = 0;
+let count = 0;
 
 module.exports = function (href, width, height) {
   function share() {
-    var url = href.apply(this, arguments);
+    const url = Reflect.apply(href, this, arguments);
     return popup(url, null, width, height);
   }
 
   share.defer = function (url) {
     url = url || 'about:blank';
-    var name = 'sharon' + count++;
+    const name = 'sharon' + count++;
 
     popup(url, name, width, height);
 
     return function () {
-      var url = href.apply(this, arguments);
+      const url = Reflect.apply(href, this, arguments);
       return popup(url, name);
     };
   };

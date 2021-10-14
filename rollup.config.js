@@ -1,23 +1,31 @@
 /* eslint-disable camelcase */
 
-module.exports = {
+const commonjs = require('@rollup/plugin-commonjs');
+const filesize = require('rollup-plugin-filesize');
+const {nodeResolve} = require('@rollup/plugin-node-resolve');
+const {terser} = require('rollup-plugin-terser');
+const {name} = require('./package.json');
+
+const config = {
   input: 'index.js',
   output: {
     exports: 'default',
     format: 'iife',
-    name: require('./package.json').name,
-    sourcemap: true
+    name,
+    sourcemap: true,
   },
   plugins: [
-    require('rollup-plugin-commonjs')(),
-    require('rollup-plugin-filesize')(),
-    require('rollup-plugin-node-resolve')(),
-    require('rollup-plugin-uglify').uglify({
+    commonjs(),
+    filesize(),
+    nodeResolve(),
+    terser({
       compress: {
         collapse_vars: true,
-        unsafe: true
+        unsafe: true,
       },
-      mangle: true
-    })
-  ]
+      mangle: true,
+    }),
+  ],
 };
+
+export default config;
