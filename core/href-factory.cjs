@@ -1,13 +1,11 @@
-const merge = require('./merge.cjs');
-
 module.exports = function (base, substitutions) {
   substitutions = substitutions || {};
 
   return function (url, options) {
     if (typeof url === 'string') {
-      options = merge({url}, options);
+      options = {url, ...options};
     } else {
-      options = merge({url: location}, url);
+      options = {url: location, ...url};
       if (substitutions.title) {
         options.title = options.title || document.title;
       }
