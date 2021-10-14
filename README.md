@@ -88,7 +88,6 @@ Each sharing platform has its endpoint under the Sharon API:
 | Buffer           | `sharon.buffer`    | Yes                 | [Reference][params-buffer]    |
 | Facebook         | `sharon.facebook`  | Yes                 |                               |
 | Gmail            | `sharon.gmail`     |                     |                               |
-| Google+          | `sharon.plus`      | Yes                 | [Reference][params-plus]      |
 | LinkedIn         | `sharon.linkedin`  |                     | [Reference][params-linkedin]  |
 | Odnoklassniki    | `sharon.ok`        | Yes                 |                               |
 | Pinterest        | `sharon.pinterest` | Yes                 | [Reference][params-pinterest] |
@@ -290,7 +289,6 @@ sharon.facebook.count((err, count) => {
 [params-buffer]: https://buffer.com/extras/button
 [params-linkedin]: https://developer.linkedin.com/docs/share-on-linkedin
 [params-pinterest]: https://developers.pinterest.com/docs/widgets/save
-[params-plus]: https://developers.google.com/+/web/share/#sharelink-endpoint
 [params-reddit]: https://www.reddit.com/dev/api/#POST_api_submit
 [params-tumblr]: https://www.tumblr.com/docs/en/share_button
 [params-twitter]: https://dev.twitter.com/web/tweet-button/web-intent

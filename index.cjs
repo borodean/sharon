@@ -5,7 +5,6 @@ const sharon = {
   linkedin: require('./linkedin.cjs'),
   ok: require('./ok.cjs'),
   pinterest: require('./pinterest.cjs'),
-  plus: require('./plus.cjs'),
   reddit: require('./reddit.cjs'),
   telegram: require('./telegram.cjs'),
   tumblr: require('./tumblr.cjs'),
