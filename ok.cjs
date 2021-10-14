@@ -12,7 +12,7 @@ const callbacks = [];
 
 window.ODKL = {
   updateCount(id, count) {
-    callbacks[id](Number(count));
+    callbacks[id || 0](Number(count));
   },
 };
 
