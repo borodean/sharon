@@ -21,6 +21,7 @@
   ],
   "license": "MIT",
   "author": "Vadym Borodin <borodean@gmail.com> http://borodean.com",
+  "main": "index.cjs",
   "repository": "borodean/sharon",
   "scripts": {
     "build": "rollup -co dist/sharon.min.js",
