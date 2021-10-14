@@ -16,4 +16,8 @@ window.ODKL = {
   },
 };
 
-module.exports.count = countFactoryIndexed('https://connect.ok.ru/dk?st.cmd=extLike&ref=', '&uid=', callbacks);
+module.exports.count = countFactoryIndexed(
+  'https://connect.ok.ru/dk?st.cmd=extLike&ref=',
+  '&uid=',
+  callbacks,
+);

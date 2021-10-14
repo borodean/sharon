@@ -23,7 +23,7 @@ describe('countFactory', () => {
 
   describe('created function', () => {
     it('retrieves a share count for the current page', () => {
-      const count = countFactory('http://example.com?count=42&url', data => {
+      const count = countFactory('http://example.com?count=42&url', (data) => {
         expect(data.url).to.equal('http://foo.share/');
         return Number(data.count);
       });
@@ -35,7 +35,7 @@ describe('countFactory', () => {
 
     context('when there is a string argument', () => {
       it('sets custom URL', () => {
-        const count = countFactory('http://example.com?url', data => {
+        const count = countFactory('http://example.com?url', (data) => {
           expect(data.url).to.equal('http://bar.share/');
         });
         count('http://bar.share/', () => {});
@@ -44,8 +44,11 @@ describe('countFactory', () => {
 
     context('when network fails', () => {
       it('passes an error argument', () => {
-        const count = countFactory('http://example.com?error=Timeout&url', () => {});
-        count('http://bar.share/', error => {
+        const count = countFactory(
+          'http://example.com?error=Timeout&url',
+          () => {},
+        );
+        count('http://bar.share/', (error) => {
           expect(error).to.be.an.instanceof(Error);
           expect(error.message).to.equal('Timeout');
         });

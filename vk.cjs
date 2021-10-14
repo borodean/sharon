@@ -20,4 +20,8 @@ window.VK = {
   },
 };
 
-module.exports.count = countFactoryIndexed('https://vk.com/share.php?act=count&url=', '&index=', callbacks);
+module.exports.count = countFactoryIndexed(
+  'https://vk.com/share.php?act=count&url=',
+  '&index=',
+  callbacks,
+);

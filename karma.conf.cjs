@@ -1,4 +1,4 @@
-module.exports = config => {
+module.exports = (config) => {
   const customLaunchers = {
     'SL Chrome 26': {
       base: 'SauceLabs',
@@ -37,17 +37,20 @@ module.exports = config => {
       debug: true,
       plugin: [
         'proxyquire-universal',
-        ['browserify-wrap', {
-          prefix: `
+        [
+          'browserify-wrap',
+          {
+            prefix: `
             window.open = function () {};
             (function () {
             var location = 'http://foo.share/';
             var screen = { width: 1920, height: 1080 };
           `,
-          suffix: `
+            suffix: `
             })();
           `,
-        }],
+          },
+        ],
       ],
     },
     files: [{pattern: 'test/*', type: 'js'}],

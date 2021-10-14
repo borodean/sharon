@@ -11,10 +11,14 @@ module.exports = function (base, substitutions) {
       }
     }
 
-    const query = Object.keys(options).map(key => {
+    const query = Object.keys(options).map((key) => {
       const queryKey = substitutions[key] || key;
       if (Array.isArray(options[key])) {
-        return queryKey + '=' + options[key].map(value => encodeURIComponent(value));
+        return (
+          queryKey +
+          '=' +
+          options[key].map((value) => encodeURIComponent(value))
+        );
       }
 
       return queryKey + '=' + encodeURIComponent(options[key]);

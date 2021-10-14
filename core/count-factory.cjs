@@ -7,15 +7,18 @@ module.exports = function (base, parser, parameter) {
       url = location;
     }
 
-    jsonp({
-      url: base + '=' + encodeURIComponent(url),
-      parameter,
-    }, (error, data) => {
-      if (error) {
-        return callback(error);
-      }
+    jsonp(
+      {
+        url: base + '=' + encodeURIComponent(url),
+        parameter,
+      },
+      (error, data) => {
+        if (error) {
+          return callback(error);
+        }
 
-      callback(null, parser(data));
-    });
+        callback(null, parser(data));
+      },
+    );
   };
 };

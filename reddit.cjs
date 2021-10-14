@@ -14,4 +14,12 @@ const href = hrefFactory('https://www.reddit.com/submit', {
 });
 
 module.exports = shareFactory(href);
-module.exports.count = countFactory('https://www.reddit.com/api/info.json?url', data => data.data.children.reduce((previousValue, currentValue) => previousValue + currentValue.data.score, 0), 'jsonp');
+module.exports.count = countFactory(
+  'https://www.reddit.com/api/info.json?url',
+  (data) =>
+    data.data.children.reduce(
+      (previousValue, currentValue) => previousValue + currentValue.data.score,
+      0,
+    ),
+  'jsonp',
+);

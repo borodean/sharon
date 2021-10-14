@@ -23,7 +23,11 @@ describe('countFactoryIndexed', () => {
 
   describe('created function', () => {
     it('retrieves a share count for the current page', () => {
-      const count = countFactoryIndexed('http://example.com?count=42&url=', '&index=', []);
+      const count = countFactoryIndexed(
+        'http://example.com?count=42&url=',
+        '&index=',
+        [],
+      );
       handler = function (data) {
         expect(data.url).to.equal('http://foo.share/');
         return Number(data.count);
@@ -36,14 +40,22 @@ describe('countFactoryIndexed', () => {
     });
 
     it('passes the length of the callbacks array', () => {
-      let count = countFactoryIndexed('http://example.com?count=42&url=', '&index=', []);
+      let count = countFactoryIndexed(
+        'http://example.com?count=42&url=',
+        '&index=',
+        [],
+      );
       handler = function (data) {
         expect(data.index).to.equal('0');
       };
 
       count(() => {});
 
-      count = countFactoryIndexed('http://example.com?count=42&url=', '&index=', [function () {}]);
+      count = countFactoryIndexed(
+        'http://example.com?count=42&url=',
+        '&index=',
+        [function () {}],
+      );
       handler = function (data) {
         expect(data.index).to.equal('1');
       };
@@ -53,7 +65,11 @@ describe('countFactoryIndexed', () => {
 
     context('when there is a string argument', () => {
       it('sets custom URL', () => {
-        const count = countFactoryIndexed('http://example.com?url=', '&index=', []);
+        const count = countFactoryIndexed(
+          'http://example.com?url=',
+          '&index=',
+          [],
+        );
         handler = function (data) {
           expect(data.url).to.equal('http://bar.share/');
           return Number(data.count);
@@ -65,8 +81,12 @@ describe('countFactoryIndexed', () => {
 
     context('when network fails', () => {
       it('passes an error argument', () => {
-        const count = countFactoryIndexed('http://example.com?error=Timeout&url=', '&index=', []);
-        count('http://bar.share/', error => {
+        const count = countFactoryIndexed(
+          'http://example.com?error=Timeout&url=',
+          '&index=',
+          [],
+        );
+        count('http://bar.share/', (error) => {
           expect(error).to.be.an.instanceof(Error);
           expect(error.message).to.equal('Timeout');
         });

@@ -25,7 +25,9 @@ describe('popup', () => {
   describe('when dimensions are provided', () => {
     it('sets window features', () => {
       popup('http://example.com', 'name', 640, 480);
-      expect(window.open.args[0][2]).to.contain('location,resizable,scrollbars,toolbar=no');
+      expect(window.open.args[0][2]).to.contain(
+        'location,resizable,scrollbars,toolbar=no',
+      );
     });
 
     it('sets window dimensions', () => {

@@ -10,4 +10,7 @@ const shareFactory = require('./core/share-factory.cjs');
 const href = hrefFactory('https://plus.google.com/share');
 
 module.exports = shareFactory(href, 600, 600);
-module.exports.count = countFactory('https://share.yandex.ru/gpp.xml?url', Number);
+module.exports.count = countFactory(
+  'https://share.yandex.ru/gpp.xml?url',
+  Number,
+);
