@@ -5,8 +5,8 @@
 A lightweight and modular social sharing library:
 
 - a toolkit to build your own share buttons;
-- supports 14 sharing platforms;
-- gzipped size is 1.71 KB;
+- supports 13 sharing platforms;
+- gzipped size is 1.72 KB;
 - you can cherry-pick which sharing platforms to use to make it even smaller.
 
 Here how it looks when you want Sharon to open a tweet popup:
@@ -74,7 +74,7 @@ import twitter from "sharon/twitter";
 
 For the `sharon.js` file, check the `dist` directory of the installed module or directly download it:
 
-- [Production version][download] – 1.71 KB, minified and gzipped
+- [Production version][download] – 1.72 KB, minified and gzipped
 - [Source map][download-map]
 
 ## API
