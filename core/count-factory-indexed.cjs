@@ -10,8 +10,8 @@ module.exports = function (base0, base1, callbacks) {
     const id = String(callbacks.length);
 
     jsonp(
+      base0 + encodeURIComponent(url) + base1 + id,
       {
-        url: base0 + encodeURIComponent(url) + base1 + id,
         parameter: false,
         object: callbacks,
         key: id,

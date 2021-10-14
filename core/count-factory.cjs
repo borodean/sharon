@@ -8,8 +8,8 @@ module.exports = function (base, parser, parameter) {
     }
 
     jsonp(
+      base + '=' + encodeURIComponent(url),
       {
-        url: base + '=' + encodeURIComponent(url),
         parameter,
       },
       (error, data) => {
