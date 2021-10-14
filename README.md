@@ -72,7 +72,7 @@ import twitter from "sharon/twitter";
 <script src="dist/sharon.js"></script>
 ```
 
-For the `sharon.js` file check the `dist` directory of the installed module or directly download it:
+For the `sharon.js` file, check the `dist` directory of the installed module or directly download it:
 
 - [Production version][download] – 1.71 KB, minified and gzipped
 - [Source map][download-map]
@@ -81,7 +81,7 @@ For the `sharon.js` file check the `dist` directory of the installed module or d
 
 ### Supported sharing platforms
 
-Each sharing platform has its own endpoint under the Sharon API:
+Each sharing platform has its endpoint under the Sharon API:
 
 | Sharing platform | Endpoint           | Share count support | Share parameters              |
 | ---------------- | ------------------ | ------------------- | ----------------------------- |
@@ -100,7 +100,7 @@ Each sharing platform has its own endpoint under the Sharon API:
 | Weibo            | `sharon.weibo`     |                     |                               |
 | XING             | `sharon.xing`      |                     | [Reference][params-xing]      |
 
-This table also shows which of the platforms support retrieving share counts and links to the share parameters references.
+This table also shows which platforms support retrieving share counts and links to the share parameters references.
 
 ### sharon._platform_(url = location.href, parameters = { title: document.title })
 
@@ -219,9 +219,9 @@ This produces a popup with a predefined title and hashtags:
 
 ![Example][media-example]
 
-The set of the features is different for the most of the sharing platforms. To find them out check their documentation, links to which are provided in the [Supported sharing platforms](#supported-sharing-platforms) table.
+The set of features is different for most of the sharing platforms. To find them out, check their documentation, links provided in the [Supported sharing platforms](#supported-sharing-platforms) table.
 
-There is an inconsistency between different platforms: for instance, Twitter expects the `text` parameter to contain a link title, while Pinterest expects the `description` one. Sharon normalizes this behavior: when you pass a `title` parameter it&apos;s automatically translated into a one that corresponds to a chosen platform.
+There is an inconsistency between different platforms: for instance, Twitter expects the `text` parameter to contain a link title, while Pinterest expects the `description` one. Sharon normalizes this behavior: when you pass a `title` parameter, it is automatically translated into one corresponding to a chosen platform.
 
 ## More examples
 
