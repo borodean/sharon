@@ -1,7 +1,9 @@
+/* eslint-disable max-nested-callbacks */
+
 const querystring = require('querystring');
 const proxyquire = require('proxyquire');
 
-const countFactory = proxyquire('../core/count-factory', {
+const countFactory = proxyquire('../core/count-factory.cjs', {
   // Stub the JSONP function to echo every query parameter it gets
   '@borodean/jsonp'(options, callback) {
     const query = querystring.parse(options.url.split('?')[1]);

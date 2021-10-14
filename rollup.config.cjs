@@ -6,8 +6,8 @@ const {nodeResolve} = require('@rollup/plugin-node-resolve');
 const {terser} = require('rollup-plugin-terser');
 const {name} = require('./package.json');
 
-const config = {
-  input: 'index.js',
+module.exports = {
+  input: 'index.cjs',
   output: {
     exports: 'default',
     format: 'iife',
@@ -27,5 +27,3 @@ const config = {
     }),
   ],
 };
-
-export default config;

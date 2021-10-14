@@ -1,6 +1,6 @@
 const expect = require('chai').expect;
 const sinon = require('sinon');
-const popup = require('../core/popup');
+const popup = require('../core/popup.cjs');
 
 describe('popup', () => {
   beforeEach(() => {

@@ -1,4 +1,4 @@
-const merge = require('./merge');
+const merge = require('./merge.cjs');
 
 module.exports = function (base, substitutions) {
   substitutions = substitutions || {};
@@ -16,12 +16,12 @@ module.exports = function (base, substitutions) {
     const query = Object.keys(options).map(key => {
       const queryKey = substitutions[key] || key;
       if (Array.isArray(options[key])) {
-        return queryKey + '=' + options[key].map(encodeURIComponent);
+        return queryKey + '=' + options[key].map(value => encodeURIComponent(value));
       }
 
       return queryKey + '=' + encodeURIComponent(options[key]);
     });
 
-    return base + (~base.indexOf('?') ? '&' : '?') + query.join('&'); // eslint-disable-line no-implicit-coercion
+    return base + (base.includes('?') ? '&' : '?') + query.join('&');
   };
 };

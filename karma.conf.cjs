@@ -50,7 +50,7 @@ module.exports = config => {
         }],
       ],
     },
-    files: ['test/*'],
+    files: [{pattern: 'test/*', type: 'js'}],
     frameworks: ['browserify', 'chai', 'mocha', 'sinon'],
     preprocessors: {
       'test/*': ['browserify'],

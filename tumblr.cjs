@@ -3,9 +3,9 @@
  * https://www.tumblr.com/docs/en/share_button
  */
 
-const countFactory = require('./core/count-factory');
-const hrefFactory = require('./core/href-factory');
-const shareFactory = require('./core/share-factory');
+const countFactory = require('./core/count-factory.cjs');
+const hrefFactory = require('./core/href-factory.cjs');
+const shareFactory = require('./core/share-factory.cjs');
 
 const href = hrefFactory('https://www.tumblr.com/widgets/share/tool', {
   title: 'title',

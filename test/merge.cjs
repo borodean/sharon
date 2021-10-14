@@ -1,4 +1,4 @@
-const merge = require('../core/merge');
+const merge = require('../core/merge.cjs');
 
 describe('merge', () => {
   it('copies the properties from a source to a target', () => {

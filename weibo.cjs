@@ -1,5 +1,5 @@
-const hrefFactory = require('./core/href-factory');
-const shareFactory = require('./core/share-factory');
+const hrefFactory = require('./core/href-factory.cjs');
+const shareFactory = require('./core/share-factory.cjs');
 
 // Doesn't load assets if opened via HTTPS
 const href = hrefFactory('http://service.weibo.com/share/share.php', {

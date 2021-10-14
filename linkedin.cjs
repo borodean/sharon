@@ -3,9 +3,9 @@
  * https://developer.linkedin.com/docs/share-on-linkedin
  */
 
-const countFactory = require('./core/count-factory');
-const hrefFactory = require('./core/href-factory');
-const shareFactory = require('./core/share-factory');
+const countFactory = require('./core/count-factory.cjs');
+const hrefFactory = require('./core/href-factory.cjs');
+const shareFactory = require('./core/share-factory.cjs');
 
 const href = hrefFactory('https://www.linkedin.com/sharing/share-offsite/', {
   url: 'url',

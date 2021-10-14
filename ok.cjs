@@ -1,6 +1,6 @@
-const countFactoryIndexed = require('./core/count-factory-indexed');
-const hrefFactory = require('./core/href-factory');
-const shareFactory = require('./core/share-factory');
+const countFactoryIndexed = require('./core/count-factory-indexed.cjs');
+const hrefFactory = require('./core/href-factory.cjs');
+const shareFactory = require('./core/share-factory.cjs');
 
 const href = hrefFactory('https://connect.ok.ru/dk?st.cmd=WidgetSharePreview', {
   url: 'st.shareUrl',

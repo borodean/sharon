@@ -5,9 +5,9 @@
  * https://www.reddit.com/dev/api/#GET_api_info
  */
 
-const countFactory = require('./core/count-factory');
-const hrefFactory = require('./core/href-factory');
-const shareFactory = require('./core/share-factory');
+const countFactory = require('./core/count-factory.cjs');
+const hrefFactory = require('./core/href-factory.cjs');
+const shareFactory = require('./core/share-factory.cjs');
 
 const href = hrefFactory('https://www.reddit.com/submit', {
   title: 'title',

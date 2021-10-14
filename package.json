@@ -26,8 +26,8 @@
   "scripts": {
     "build": "rollup -co dist/sharon.min.js",
     "lint": "xo --env=browser --env=mocha --global expect --space",
-    "test": "karma start",
-    "test-local": "karma start --local"
+    "test": "karma start karma.conf.cjs",
+    "test-local": "karma start karma.conf.cjs --local"
   },
   "dependencies": {
     "@borodean/jsonp": "^3.0.2"

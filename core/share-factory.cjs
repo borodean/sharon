@@ -1,4 +1,4 @@
-const popup = require('./popup');
+const popup = require('./popup.cjs');
 
 let count = 0;
 
@@ -8,8 +8,7 @@ module.exports = function (href, width, height) {
     return popup(url, null, width, height);
   }
 
-  share.defer = function (url) {
-    url = url || 'about:blank';
+  share.defer = function (url = 'about:blank') {
     const name = 'sharon' + count++;
 
     popup(url, name, width, height);
