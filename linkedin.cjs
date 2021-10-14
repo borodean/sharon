@@ -10,4 +10,4 @@ const href = hrefFactory('https://www.linkedin.com/sharing/share-offsite/', {
   url: 'url',
 });
 
-module.exports = shareFactory(href, 600, 400);
+module.exports = shareFactory(href, 500, 400);
