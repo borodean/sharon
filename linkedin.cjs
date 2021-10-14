@@ -3,7 +3,6 @@
  * https://developer.linkedin.com/docs/share-on-linkedin
  */
 
-const countFactory = require('./core/count-factory.cjs');
 const hrefFactory = require('./core/href-factory.cjs');
 const shareFactory = require('./core/share-factory.cjs');
 
