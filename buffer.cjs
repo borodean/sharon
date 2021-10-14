@@ -15,5 +15,5 @@ const href = hrefFactory('https://buffer.com/add', {
 module.exports = shareFactory(href, 850, 600);
 module.exports.count = countFactory(
   'https://api.bufferapp.com/1/links/shares.json?url',
-  (data) => data.shares,
+  (data) => data.shares
 );

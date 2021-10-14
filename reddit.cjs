@@ -19,7 +19,7 @@ module.exports.count = countFactory(
   (data) =>
     data.data.children.reduce(
       (previousValue, currentValue) => previousValue + currentValue.data.score,
-      0,
+      0
     ),
-  'jsonp',
+  'jsonp'
 );

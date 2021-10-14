@@ -22,7 +22,7 @@ module.exports = function (url, name, width, height) {
         top +
         ',left=' +
         left +
-        ',location,resizable,scrollbars,toolbar=no',
+        ',location,resizable,scrollbars,toolbar=no'
     );
   }
 

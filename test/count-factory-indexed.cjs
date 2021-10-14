@@ -26,7 +26,7 @@ describe('countFactoryIndexed', () => {
       const count = countFactoryIndexed(
         'http://example.com?count=42&url=',
         '&index=',
-        [],
+        []
       );
       handler = function (data) {
         expect(data.url).to.equal('http://foo.share/');
@@ -43,7 +43,7 @@ describe('countFactoryIndexed', () => {
       let count = countFactoryIndexed(
         'http://example.com?count=42&url=',
         '&index=',
-        [],
+        []
       );
       handler = function (data) {
         expect(data.index).to.equal('0');
@@ -54,7 +54,7 @@ describe('countFactoryIndexed', () => {
       count = countFactoryIndexed(
         'http://example.com?count=42&url=',
         '&index=',
-        [function () {}],
+        [function () {}]
       );
       handler = function (data) {
         expect(data.index).to.equal('1');
@@ -68,7 +68,7 @@ describe('countFactoryIndexed', () => {
         const count = countFactoryIndexed(
           'http://example.com?url=',
           '&index=',
-          [],
+          []
         );
         handler = function (data) {
           expect(data.url).to.equal('http://bar.share/');
@@ -84,7 +84,7 @@ describe('countFactoryIndexed', () => {
         const count = countFactoryIndexed(
           'http://example.com?error=Timeout&url=',
           '&index=',
-          [],
+          []
         );
         count('http://bar.share/', (error) => {
           expect(error).to.be.an.instanceof(Error);

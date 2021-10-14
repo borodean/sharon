@@ -16,7 +16,7 @@ module.exports = function (base0, base1, callbacks) {
         object: callbacks,
         key: id,
       },
-      callback,
+      callback
     );
   };
 };

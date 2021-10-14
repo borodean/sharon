@@ -15,7 +15,7 @@ describe('hrefFactory', () => {
       const href = hrefFactory('http://example.com');
       const result = href();
       expect(result).to.equal(
-        'http://example.com?url=http%3A%2F%2Ffoo.share%2F',
+        'http://example.com?url=http%3A%2F%2Ffoo.share%2F'
       );
     });
 
@@ -24,7 +24,7 @@ describe('hrefFactory', () => {
         const href = hrefFactory('http://example.com?foo=bar');
         const result = href();
         expect(result).to.equal(
-          'http://example.com?foo=bar&url=http%3A%2F%2Ffoo.share%2F',
+          'http://example.com?foo=bar&url=http%3A%2F%2Ffoo.share%2F'
         );
       });
     });
@@ -34,7 +34,7 @@ describe('hrefFactory', () => {
         const href = hrefFactory('http://example.com');
         const result = href('http://bar.share/');
         expect(result).to.equal(
-          'http://example.com?url=http%3A%2F%2Fbar.share%2F',
+          'http://example.com?url=http%3A%2F%2Fbar.share%2F'
         );
       });
     });
@@ -44,7 +44,7 @@ describe('hrefFactory', () => {
         const href = hrefFactory('http://example.com');
         const result = href({related: 'twitter:news'});
         expect(result).to.equal(
-          'http://example.com?url=http%3A%2F%2Ffoo.share%2F&related=twitter%3Anews',
+          'http://example.com?url=http%3A%2F%2Ffoo.share%2F&related=twitter%3Anews'
         );
       });
 
@@ -52,7 +52,7 @@ describe('hrefFactory', () => {
         const href = hrefFactory('http://example.com');
         const result = href({hashtags: ['nature', 'some spaces']});
         expect(result).to.equal(
-          'http://example.com?url=http%3A%2F%2Ffoo.share%2F&hashtags=nature,some%20spaces',
+          'http://example.com?url=http%3A%2F%2Ffoo.share%2F&hashtags=nature,some%20spaces'
         );
       });
     });
@@ -62,7 +62,7 @@ describe('hrefFactory', () => {
         const href = hrefFactory('http://example.com');
         const result = href('http://bar.share/', {via: 'example'});
         expect(result).to.equal(
-          'http://example.com?url=http%3A%2F%2Fbar.share%2F&via=example',
+          'http://example.com?url=http%3A%2F%2Fbar.share%2F&via=example'
         );
       });
     });
@@ -72,7 +72,7 @@ describe('hrefFactory', () => {
         const href = hrefFactory('http://example.com', {tags: 'hashtags'});
         const result = href({tags: ['nature', 'sunset']});
         expect(result).to.equal(
-          'http://example.com?url=http%3A%2F%2Ffoo.share%2F&hashtags=nature,sunset',
+          'http://example.com?url=http%3A%2F%2Ffoo.share%2F&hashtags=nature,sunset'
         );
       });
 
@@ -80,7 +80,7 @@ describe('hrefFactory', () => {
         const href = hrefFactory('http://example.com', {url: 'u'});
         const result = href();
         expect(result).to.equal(
-          'http://example.com?u=http%3A%2F%2Ffoo.share%2F',
+          'http://example.com?u=http%3A%2F%2Ffoo.share%2F'
         );
       });
     });
@@ -90,7 +90,7 @@ describe('hrefFactory', () => {
         const href = hrefFactory('http://example.com', {title: 'text'});
         const result = href();
         expect(result).to.equal(
-          'http://example.com?url=http%3A%2F%2Ffoo.share%2F&text=Sharon%20Stone',
+          'http://example.com?url=http%3A%2F%2Ffoo.share%2F&text=Sharon%20Stone'
         );
       });
 
@@ -98,7 +98,7 @@ describe('hrefFactory', () => {
         const href = hrefFactory('http://example.com', {title: 'text'});
         const result = href({title: 'Audrey Hepburn'});
         expect(result).to.equal(
-          'http://example.com?url=http%3A%2F%2Ffoo.share%2F&text=Audrey%20Hepburn',
+          'http://example.com?url=http%3A%2F%2Ffoo.share%2F&text=Audrey%20Hepburn'
         );
       });
     });

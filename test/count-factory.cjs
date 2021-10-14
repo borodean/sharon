@@ -46,7 +46,7 @@ describe('countFactory', () => {
       it('passes an error argument', () => {
         const count = countFactory(
           'http://example.com?error=Timeout&url',
-          () => {},
+          () => {}
         );
         count('http://bar.share/', (error) => {
           expect(error).to.be.an.instanceof(Error);

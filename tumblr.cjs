@@ -15,5 +15,5 @@ const href = hrefFactory('https://www.tumblr.com/widgets/share/tool', {
 module.exports = shareFactory(href, 557, 600);
 module.exports.count = countFactory(
   'https://api.tumblr.com/v2/share/stats?url',
-  (data) => data.response.note_count,
+  (data) => data.response.note_count
 );

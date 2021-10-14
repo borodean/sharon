@@ -18,7 +18,7 @@ module.exports = function (base, parser, parameter = 'callback') {
         }
 
         callback(null, parser(data));
-      },
+      }
     );
   };
 };

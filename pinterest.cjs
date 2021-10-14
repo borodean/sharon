@@ -9,5 +9,5 @@ const href = hrefFactory('https://www.pinterest.com/pin/create/button/', {
 module.exports = shareFactory(href, 750, 320);
 module.exports.count = countFactory(
   'https://api.pinterest.com/v1/urls/count.json?url',
-  (data) => data.count,
+  (data) => data.count
 );
