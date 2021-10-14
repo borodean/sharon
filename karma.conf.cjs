@@ -1,34 +1,28 @@
 module.exports = (config) => {
   const customLaunchers = {
-    'SL Chrome 26': {
+    'SL Chrome 49': {
       base: 'SauceLabs',
       browserName: 'chrome',
       platform: 'Linux',
-      version: '26.0',
+      version: '49',
     },
     'SL Edge 13': {
       base: 'SauceLabs',
       browserName: 'MicrosoftEdge',
       platform: 'Windows 10',
-      version: '13.10586',
+      version: '13',
     },
-    'SL Firefox 4': {
+    'SL Firefox 42': {
       base: 'SauceLabs',
       browserName: 'firefox',
       platform: 'Linux',
-      version: '4.0',
+      version: '42',
     },
-    'SL Internet Explorer 9': {
-      base: 'SauceLabs',
-      browserName: 'internet explorer',
-      platform: 'Windows 7',
-      version: '9.0',
-    },
-    'SL Safari 8': {
+    'SL Safari 10': {
       base: 'SauceLabs',
       browserName: 'safari',
-      platform: 'OS X 10.10',
-      version: '8.0',
+      platform: 'OS X 10.11',
+      version: '10',
     },
   };
 
