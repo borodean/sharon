@@ -3,8 +3,8 @@ const proxyquire = require('proxyquire');
 const sinon = require('sinon');
 
 const popup = sinon.spy();
-const shareFactory = proxyquire('../core/share-factory.cjs', {
-  './popup.cjs': popup,
+const shareFactory = proxyquire('../core/share-factory.js', {
+  './popup.js': popup,
 });
 
 describe('shareFactory', () => {

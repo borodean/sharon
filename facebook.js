@@ -1,6 +1,6 @@
-const countFactory = require('./core/count-factory.cjs');
-const hrefFactory = require('./core/href-factory.cjs');
-const shareFactory = require('./core/share-factory.cjs');
+const countFactory = require('./core/count-factory.js');
+const hrefFactory = require('./core/href-factory.js');
+const shareFactory = require('./core/share-factory.js');
 
 const href = hrefFactory('https://www.facebook.com/sharer.php', {
   url: 'u',

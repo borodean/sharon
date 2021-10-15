@@ -3,9 +3,9 @@
  * https://vk.com/dev/share_details
  */
 
-const countFactoryIndexed = require('./core/count-factory-indexed.cjs');
-const hrefFactory = require('./core/href-factory.cjs');
-const shareFactory = require('./core/share-factory.cjs');
+const countFactoryIndexed = require('./core/count-factory-indexed.js');
+const hrefFactory = require('./core/href-factory.js');
+const shareFactory = require('./core/share-factory.js');
 
 const href = hrefFactory('https://vk.com/share.php');
 module.exports = shareFactory(href, 650, 610);

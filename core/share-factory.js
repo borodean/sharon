@@ -1,4 +1,4 @@
-const popup = require('./popup.cjs');
+const popup = require('./popup.js');
 
 let count = 0;
 

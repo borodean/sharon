@@ -21,13 +21,12 @@
   ],
   "license": "MIT",
   "author": "Vadym Borodin <borodean@gmail.com> http://borodean.com",
-  "main": "index.cjs",
   "repository": "borodean/sharon",
   "scripts": {
     "build": "rollup -co dist/sharon.min.js",
     "lint": "xo --env=browser --env=mocha --global expect --prettier --space",
-    "test": "karma start karma.conf.cjs",
-    "test-local": "karma start karma.conf.cjs --local"
+    "test": "karma start karma.conf.js",
+    "test-local": "karma start karma.conf.js --local"
   },
   "dependencies": {
     "@borodean/jsonp": "^3.0.2"
@@ -53,6 +52,6 @@
     "rollup-plugin-terser": "^7.0.2",
     "sinon": "^11.1.2",
     "watchify": "^4.0.0",
-    "xo": "^0.45.0"
+    "xo": "^0.39.1"
   }
 }

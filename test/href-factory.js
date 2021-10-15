@@ -1,4 +1,4 @@
-const hrefFactory = require('../core/href-factory.cjs');
+const hrefFactory = require('../core/href-factory.js');
 
 describe('hrefFactory', () => {
   beforeEach(() => {

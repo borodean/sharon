@@ -3,7 +3,7 @@
 const querystring = require('querystring');
 const proxyquire = require('proxyquire');
 
-const countFactory = proxyquire('../core/count-factory.cjs', {
+const countFactory = proxyquire('../core/count-factory.js', {
   // Stub the JSONP function to echo every query parameter it gets
   '@borodean/jsonp'(url, options, callback) {
     const query = querystring.parse(url.split('?')[1]);

@@ -2,9 +2,9 @@
 .npmignore
 .travis.yml
 coverage
-karma.conf.cjs
+karma.conf.js
 media
 npm-debug.log
-rollup.config.cjs
+rollup.config.js
 sharon-*.tgz
 test

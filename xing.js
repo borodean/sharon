@@ -3,8 +3,8 @@
  * https://dev.xing.com/plugins/share_button/docs
  */
 
-const hrefFactory = require('./core/href-factory.cjs');
-const shareFactory = require('./core/share-factory.cjs');
+const hrefFactory = require('./core/href-factory.js');
+const shareFactory = require('./core/share-factory.js');
 
 const href = hrefFactory('https://www.xing.com/spi/shares/new');
 

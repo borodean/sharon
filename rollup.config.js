@@ -7,7 +7,7 @@ const {terser} = require('rollup-plugin-terser');
 const {name} = require('./package.json');
 
 module.exports = {
-  input: 'index.cjs',
+  input: 'index.js',
   output: {
     exports: 'default',
     format: 'iife',

@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/no-array-reduce */
+
 /**
  * References:
  * https://www.reddit.com/buttons/
@@ -5,9 +7,9 @@
  * https://www.reddit.com/dev/api/#GET_api_info
  */
 
-const countFactory = require('./core/count-factory.cjs');
-const hrefFactory = require('./core/href-factory.cjs');
-const shareFactory = require('./core/share-factory.cjs');
+const countFactory = require('./core/count-factory.js');
+const hrefFactory = require('./core/href-factory.js');
+const shareFactory = require('./core/share-factory.js');
 
 const href = hrefFactory('https://www.reddit.com/submit', {
   title: 'title',
