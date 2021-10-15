@@ -1,6 +1,13 @@
+## 2.0.0
+
+Drop older browsers support
+Update Buffer, Facebook, LinkedIn, Pinterest, Tumblr and Odnoklassniki URLs and methods.
+Remove Google Plus.
+Add TypeScript typings.
+
 ## 2.0.0-beta.0
 
-Add sharon.*network*.defer method to avoid the popup blockers.
+Add sharon._network_.defer method to avoid the popup blockers.
 
 ## 1.6.0
 
